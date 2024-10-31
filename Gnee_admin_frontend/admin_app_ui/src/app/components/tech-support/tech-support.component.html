@@ -1,0 +1,237 @@
+<div class="wrapper">
+
+    <app-topbar></app-topbar>
+
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+        <app-sidebar [item]="tab"></app-sidebar>
+    </aside>
+
+    <div class="content-wrapper">
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Tech Support</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">Tech Support</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-primary card-outline card-tabs">
+                            <div class="card-header p-0 pt-1 border-bottom-0">
+                                <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" role="tab" aria-controls="custom-tabs-three-home1" aria-selected="true" (click)="tabSelect('System Details')">System Details</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="custom-tabs-three-profile-tab" data-toggle="pill" role="tab" aria-controls="custom-tabs-three-profile1" aria-selected="false" (click)="tabSelect('Server Log')">
+                                            Server Log
+                                        </a>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <a class="nav-link" id="custom-tabs-three-messages-tab" data-toggle="pill" href="#custom-tabs-three-messages1" role="tab" aria-controls="custom-tabs-three-messages1" aria-selected="false">
+                                            Model Status
+                                        </a>
+                                    </li> -->
+
+                                    <!-- <li class="nav-item">
+                                        <a class="nav-link" id="custom-tabs-three-messages-tab" data-toggle="pill" href="#custom-tabs-three-messages11" role="tab" aria-controls="custom-tabs-three-messages11" aria-selected="false">
+                                            Model Retraining
+                                        </a>
+                                    </li> -->
+
+                                    <!-- <li class="nav-item">
+                                        <a class="nav-link" id="custom-tabs-three-messages-tab" data-toggle="pill" href="#custom-tabs-three-messages111" role="tab" aria-controls="custom-tabs-three-messages111" aria-selected="false">
+                                            Tensor Board
+                                        </a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <div *ngIf="tab=='System Details'" class="card-body">
+
+                                <div class="tab-pane fade show active" id="custom-tabs-three-home1" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                                    <div class="col-md-12">
+                                        <div class="card card-default">
+                                            <div class="card-header">
+                                                <h3 class="card-title"><strong>System Details</strong></h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <iframe frameborder="0" scrolling="yes" seamless="seamless" [src]="link | safe" style="display: block; width: 100%; height: 100vh;"></iframe>
+                                                    <!-- <iframe width="560" height="315" src="http://fusion1.GneeAd.com/grafana/dashboard/snapshot/qAHc2fRS6cE8eAWP9T4xZyAy1K32WOVG" frameborder="0" allowfullscreen></iframe> -->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            <div *ngIf="tab=='Server Log'" class="card-body">
+
+                                <div class="tab-pane fade show active" id="custom-tabs-three-home1" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                                    <div class="col-md-12">
+                                        <div class="card card-default">
+                                            <div class="card-header">
+                                                <h3 class="card-title"><strong>Server Log</strong></h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <iframe frameborder="0" scrolling="yes" seamless="seamless" [src]="logLink | safe" style="display: block; width: 100%; height: 100vh;"></iframe>
+                                                    <!-- <iframe width="560" height="315" src="http://fusion1.GneeAd.com/grafana/dashboard/snapshot/qAHc2fRS6cE8eAWP9T4xZyAy1K32WOVG" frameborder="0" allowfullscreen></iframe> -->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- <div class="card-body">
+                                <div class="tab-content" id="custom-tabs-three-tabContent">
+                                    <div class="tab-pane fade show active" *ngIf="tab=='System Details'" id="custom-tabs-three-home1" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                                        <div class="col-md-12">
+                                            <div class="card card-default">
+                                                <div class="card-header">
+                                                    <h3 class="card-title"><strong>System Details</strong></h3>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <iframe src="http://stackoverflow.com/" frameborder="0" scrolling="yes" seamless="seamless" style="display: block; width: 100%; height: 100vh;"></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="custom-tabs-three-profile1" *ngIf="tab=='Server Log'" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
+                                        <div class="card card-default">
+                                            <div class="card-header">
+                                                <h3 class="card-title"><strong>Server Log</strong></h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>Place content Here</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="custom-tabs-three-messages1" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Model Status</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table id="example13" class="table table-bordered table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Model ID</th>
+                                                                <th>Product</th>
+                                                                <th>Service</th>
+                                                                <th>Model Type</th>
+                                                                <th>Published on</th>
+                                                                <th>Decommission On</th>
+                                                                <th>Status</th>
+                                                                <th>#Hits</th>
+                                                                <th>#Success</th>
+                                                                <th>#Exceptions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>#12432</td>
+                                                                <td>Product Name</td>
+                                                                <td>New Service</td>
+                                                                <td>new</td>
+                                                                <td>20/12/2021</td>
+                                                                <td>On</td>
+                                                                <td>New</td>
+                                                                <td>120 hits</td>
+                                                                <td>120 success</td>
+                                                                <td>120 exceptions</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="custom-tabs-three-messages11" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Model Retraining</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table id="example13" class="table table-bordered table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Model ID</th>
+                                                                <th>Product</th>
+                                                                <th>Service</th>
+                                                                <th>Model Type</th>
+                                                                <th>Trained on</th>
+                                                                <th>Prediction Accuracy</th>
+                                                                <th>Batch Size</th>
+                                                                <th>#Images</th>
+                                                                <th></th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>#12432</td>
+                                                                <td>Product Name</td>
+                                                                <td>New Service</td>
+                                                                <td>new</td>
+                                                                <td>20/12/2021</td>
+                                                                <td>On</td>
+                                                                <td>New</td>
+                                                                <td>120 hits</td>
+                                                                <td><button type="button" class="btn btn-block btn-warning btn-sm">Retain</button></td>
+                                                                <td><button type="button" class="btn btn-block btn-danger btn-sm">Publish</button></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="custom-tabs-three-messages111" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Tensor Board</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <iframe src="http://stackoverflow.com/" frameborder="0" scrolling="yes" seamless="seamless" style="display: block; width: 100%; height: 100vh;"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="main-footer">
+        <strong>Copyright &copy; 2021-2022 <a href="#">Admin Panel Demo</a>.</strong> All rights reserved.
+    </footer>
+</div>

@@ -1,0 +1,820 @@
+<div *ngIf="mode=='add'">
+    <div class="wrapper">
+
+
+        <app-topbar></app-topbar>
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+            <app-sidebar></app-sidebar>
+        </aside>
+
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Associate Details</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/administrator">Admin</a></li>
+                                <li class="breadcrumb-item"><a href="/administrator/associate">Associate</a></li>
+                                <li class="breadcrumb-item active">Associate Details </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="content">
+                <div class="container">
+                    <div class="row">
+
+
+                        <div class="col-12 ">
+                            <div class="card card-primary card-outline card-tabs">
+                                <div class="card-header p-0 pt-1 border-bottom-0">
+                                    <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home1" role="tab" aria-controls="custom-tabs-three-home1" aria-selected="true">Associate Details</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content" id="custom-tabs-three-tabContent">
+                                        <div class="tab-pane fade show active" id="custom-tabs-three-home1" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                                            <div class="col-md-12">
+                                                <!--<div class="edit_block">
+                                         <button type="submit" class="btn btn-warning">Edit</button>
+                                       </div>-->
+                                                <form [formGroup]="associateForm">
+                                                    <div class="card card-default">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title"><strong>Associate Core Details</strong></h3>
+
+
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row even">
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">First Name</label>
+                                                                        <input type="text" class="form-control" formControlName="first_name">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Last Name </label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="last_name">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Role</label>
+                                                                        <select class="custom-select" formControlName="role">
+                                            <option *ngFor="let role of role_list">{{role.role}}</option>
+                                          </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+
+
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Address Line 1</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="address_line_1">
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Address Line 2</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="address_line_2">
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Address Line 3</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="address_line_3">
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="row even">
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Post Code</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="postcode">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Country</label>
+
+                                                                        <select class="custom-select" formControlName="country">
+                                            <option *ngFor="let country of country_list">{{country.country_name }}</option>
+                                          </select>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Country State</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="county">
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="row ">
+
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Primary Contact No</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="contact_number">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Secondary Contact No</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="secondry_contact">
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="row even">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Primary Email </label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="email">
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Secondary Email </label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="personal_email">
+                                                                    </div>
+
+                                                                </div>
+
+
+
+
+                                                            </div>
+                                                            <div class="row ">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">NDA Doc</label>
+                                                                        <div class="custom-file">
+                                                                            <input type="file" class="custom-file-input" id="exampleInputFile">
+                                                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Status</label>
+                                                                        <select class="custom-select" formControlName="status">
+                                                                                <option>active</option>
+                                                                                <option>inactive</option>
+                                                                                <option>retiered</option>
+                                                                        </select>
+
+                                                                    </div>
+
+
+
+                                                                </div>
+
+                                                                <!-- <div class="col-md-6">
+                                                                    <select class="custom-select" formControlName="status">
+                                                                        <option *ngFor="let status of status_list" value="{{status.status}}">{{status.status}}</option>
+                                                                      </select>
+                                                                </div> -->
+                                                            </div>
+
+                                                            <div class="row even">
+
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Login ID</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="login_id">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name" class="hid_vis">example</label>
+                                                                        <div class="clearfix"></div>
+                                                                        <a href="#"><button type="button" class="btn btn-warning float-left mr-10">Password Reset</button></a>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                    </div>
+                                                </form>
+
+                                                <!--here-->
+
+                                            </div>
+
+                                            <div class="card-footer">
+
+
+                                                <button type="submit" class="btn btn-danger float-right" (click)="onAddCancel()">Cancel</button>
+                                                <button type="submit" class="btn btn-success float-right mr-10" (click)="onAdd()">Add</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </section>
+        </div>
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2021-2022 <a href="#">Admin Panel Demo</a>.</strong> All rights reserved.
+
+        </footer>
+
+
+
+    </div>
+</div>
+
+
+<div *ngIf="mode=='edit'">
+    <div class="wrapper">
+
+
+        <app-topbar></app-topbar>
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+            <app-sidebar></app-sidebar>
+        </aside>
+
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Associate Details</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/administrator">Admin</a></li>
+                                <li class="breadcrumb-item"><a href="/administrator/associate">Associate</a></li>
+                                <li class="breadcrumb-item active">Associate Details </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="content">
+                <div class="container">
+                    <div class="row">
+
+
+                        <div class="col-12 ">
+                            <div class="card card-primary card-outline card-tabs">
+                                <div class="card-header p-0 pt-1 border-bottom-0">
+                                    <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home1" role="tab" aria-controls="custom-tabs-three-home1" aria-selected="true">Associate Details</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content" id="custom-tabs-three-tabContent">
+                                        <div class="tab-pane fade show active" id="custom-tabs-three-home1" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                                            <div class="col-md-12">
+
+
+                                                <form [formGroup]="associateForm">
+                                                    <div class="card card-default">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title"><strong>Associate Core Details</strong></h3>
+
+
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row even">
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">First Name</label>
+                                                                        <input type="text" class="form-control" formControlName="first_name">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Last Name </label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="last_name">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Role</label>
+                                                                        <select class="custom-select" formControlName="role">
+                                                                            <option *ngFor="let role of role_list">{{role.role}}</option>
+                                                                         </select>
+
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+
+
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Address Line 1</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="address_line_1">
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Address Line 2</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="address_line_2">
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Address Line 3</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="address_line_3">
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="row even">
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Post Code</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="postcode">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Country</label>
+                                                                        <select class="custom-select" formControlName="country">
+                                        <option *ngFor="let country of country_list">{{country.country_name }}</option>
+                                      </select>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">County State</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="county">
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="row ">
+
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Primary Contact No</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="contact_number">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Secondary Contact No</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="personal_email">
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="row even">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Primary Email </label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="email">
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Secondary Email </label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="personal_email">
+                                                                    </div>
+
+                                                                </div>
+
+
+
+
+                                                            </div>
+                                                            <div class="row ">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">NDA Doc</label>
+                                                                        <div class="custom-file">
+                                                                            <input type="file" class="custom-file-input" id="exampleInputFile">
+                                                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Status</label>
+                                                                        <select class="custom-select" formControlName="status">
+                                                                            <option>active</option>
+                                                                            <option>inactive</option>
+                                                                            <option>retiered</option>
+                                                                        </select>
+
+                                                                    </div>
+
+                                                                </div>
+                                                                <!-- <div class="col-md-6">
+                                                                    <select class="custom-select" formControlName="status">
+                                                                        <option *ngFor="let status of status_list" value="{{status.status}}">{{status.status}}</option>
+                                                                      </select>
+                                                                </div> -->
+                                                            </div>
+
+                                                            <div class="row even">
+
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Login ID</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="login_id">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name" class="hid_vis">example</label>
+                                                                        <div class="clearfix"></div>
+                                                                        <a href="#"><button type="button" class="btn btn-warning float-left mr-10">Password Reset</button></a>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                    </div>
+                                                </form>
+
+
+                                            </div>
+
+                                            <div class="card-footer">
+
+
+                                                <button type="submit" class="btn btn-danger float-right" (click)="onCancel()">Cancel</button>
+                                                <button type="submit" class="btn btn-success float-right mr-10" (click)="onSave()">Save</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+        </div>
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2021-2022 <a href="#">Admin Panel Demo</a>.</strong> All rights reserved.
+
+        </footer>
+
+
+
+    </div>
+</div>
+
+
+<div *ngIf="mode=='view'">
+    <div class="wrapper">
+
+
+        <app-topbar></app-topbar>
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+            <app-sidebar></app-sidebar>
+        </aside>
+
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Associate Details</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/administrator">Admin</a></li>
+                                <li class="breadcrumb-item"><a href="/administrator/associate">Associate</a></li>
+                                <li class="breadcrumb-item active">Associate Details </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="content">
+                <div class="container">
+                    <div class="row">
+
+
+                        <div class="col-12 ">
+                            <div class="card card-primary card-outline card-tabs">
+                                <div class="card-header p-0 pt-1 border-bottom-0">
+                                    <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home1" role="tab" aria-controls="custom-tabs-three-home1" aria-selected="true">Associate Details</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content" id="custom-tabs-three-tabContent">
+                                        <div class="tab-pane fade show active" id="custom-tabs-three-home1" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                                            <div class="col-md-12">
+                                                <div class="edit_block">
+                                                    <button type="submit" class="btn btn-warning" (click)="onEdit()">Edit</button>
+                                                </div>
+                                                <form [formGroup]="associateForm">
+                                                    <div class="card card-default">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title"><strong>Associate Core Details</strong></h3>
+
+
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row even">
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">First Name</label>
+                                                                        <input type="text" class="form-control" formControlName="first_name" readonly>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Last Name </label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="last_name" readonly>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Role</label>
+                                                                        <select class="custom-select" formControlName="role" [attr.disabled]="dropdown_disable? true : null">
+                                                                             <option *ngFor="let role of role_list">{{role.role}}</option>
+    
+                                                                         </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+
+
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Address Line 1</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="address_line_1" readonly>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Address Line 2</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="address_line_2" readonly>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Address Line 3</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="address_line_3" readonly>
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="row even">
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Post Code</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="postcode" readonly>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Country</label>
+                                                                        <select class="custom-select" formControlName="country" [attr.disabled]="dropdown_disable? true : null">
+                                                                             <option *ngFor="let country of country_list">{{country.country_name }}</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">County State</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="county" readonly>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="row ">
+
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Primary Contact No</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="contact_number" readonly>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Secondary Contact No</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="personal_email" readonly>
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="row even">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Primary Email </label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="email" readonly>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Secondary Email </label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="personal_email" readonly>
+                                                                    </div>
+
+                                                                </div>
+
+
+
+
+                                                            </div>
+                                                            <div class="row ">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">NDA Doc</label>
+                                                                        <div class="custom-file">
+                                                                            <input type="file" class="custom-file-input" id="exampleInputFile">
+                                                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Status</label>
+                                                                        <select class="custom-select" formControlName="status" [attr.disabled]="dropdown_disable? true : null">
+                                                        <option>active</option>
+                                                        <option>inactive</option>
+                                                        <option>retiered</option>
+                                </select>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row even">
+
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name">Login ID</label>
+                                                                        <input type="text" class="form-control" id="text" formControlName="login_id" readonly>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="client_name" class="hid_vis">example</label>
+                                                                        <div class="clearfix"></div>
+                                                                        <a href="#"><button type="button" class="btn btn-warning float-left mr-10">Password Reset</button></a>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                    </div>
+                                                </form>
+
+
+                                            </div>
+
+                                            <!--<div class="card-footer">
+                  
+                  
+                  <button type="submit" class="btn btn-danger float-right">Cancel</button>
+                  <button type="submit" class="btn btn-success float-right mr-10">Save</button>
+                  </div>-->
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </section>
+        </div>
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2021-2022 <a href="#">Admin Panel Demo</a>.</strong> All rights reserved.
+
+        </footer>
+
+
+
+    </div>
+</div>

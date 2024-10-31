@@ -1,0 +1,1176 @@
+ <div class="col-12 ">
+              <div class="card card-primary card-outline card-tabs">
+                <div class="card-header p-0 pt-1 border-bottom-0">
+                  <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link " id="custom-tabs-three-home-tab" data-toggle="pill" role="tab"
+                        aria-controls="custom-tabs-three-home1" aria-selected="false"
+                        (click)="tabSelect('Client Details')">Client Details</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="custom-tabs-three-profile-tab" data-toggle="pill" role="tab"
+                        aria-controls="custom-tabs-three-profile1" aria-selected="true"
+                        (click)="tabSelect('Client Subscription')">Client Subscription</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" id="custom-tabs-three-messages-tab" data-toggle="pill" class="nav-link"
+                        ole="tab" aria-controls="custom-tabs-three-messages1" aria-selected="true"
+                        (click)="tabSelect('Client Users')">Client Users</a>
+
+                    </li>
+
+                  </ul>
+                </div>
+                <div *ngIf="tab=='Client Details'" class="card-body">
+                  <div class="tab-content" id="custom-tabs-three-tabContent">
+                    <div class="tab-pane fade show active" id="custom-tabs-three-home1" role="tabpanel"
+                      aria-labelledby="custom-tabs-three-home-tab">
+                      <div class="col-md-12">
+                        <div class="edit_block">
+                          <button type="submit" class="btn btn-warning">Edit</button>
+                        </div>
+                        <!-- {{clientdetailForm.value|json}} -->
+                        <div class="card card-default" [formGroup]='clientdetailForm' (ngSubmit)="onSubmit()">
+                          <div class="card-header">
+                            <h3 class="card-title"><strong>Client Details</strong></h3>
+
+
+                          </div>
+                          <div class="card-body">
+                            <div class="row even">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="client_name">Client Name</label>
+                                  <input type="text" formControlName='client_name' class="form-control" id="client_name"
+                                    placeholder="Client Name">
+                                </div>
+
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="client_name">Client Status</label>
+                                  <select class="custom-select" formControlName="is_active" id="is_active" readonly>
+                                    <option>active</option>
+                                    <option>inactive</option>
+                                    <option>retiered</option>
+                                  </select>
+                                  <!-- <input type="text" class="form-control" formControlName="is_active" id="is_active" > -->
+
+                                </div>
+
+                              </div>
+
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Client Website</label>
+                                  <input type="text" formControlName="client_website" class="form-control"
+                                    id="client_website">
+                                </div>
+
+                              </div>
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Client Logo</label>
+                                  <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="exampleInputFile">
+                                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <div class="col-md-4">
+
+
+                              </div>
+                            </div>
+
+
+                            <div class="row even">
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Registered Country</label>
+                                  <input type="text" class="form-control" formControlName="registered_in_country"
+                                    id="registered_in_country">
+                                </div>
+
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Registration ID</label>
+                                  <input type="text" class="form-control" formControlName="registration_id"
+                                    id="registration_id">
+                                </div>
+
+                              </div>
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Default Currency</label>
+                                  <input type="text" class="form-control" formControlName="default_currency_used"
+                                    id="default">
+                                </div>
+
+                              </div>
+                            </div>
+
+
+                            <div class="row">
+
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="client_name">VAT/GST/Tax Number</label>
+                                  <input type="text" class="form-control" formControlName="vat_number" id="VAT">
+                                </div>
+
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="client_name">VAT %</label>
+                                  <input type="text" class="form-control" formControlName="VAT_used" id="used_vat">
+                                </div>
+
+                              </div>
+
+
+                            </div>
+                            <div class="row even">
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Address Line 1</label>
+                                  <input type="text" class="form-control" formControlName='address_line_1' id="text">
+                                </div>
+
+                              </div>
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Address Line 2</label>
+                                  <input type="text" class="form-control" formControlName='address_line_2' id="text">
+                                </div>
+
+                              </div>
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Address Line 3</label>
+                                  <input type="text" class="form-control" formControlName='address_line_3' id="text">
+                                </div>
+
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Pincode</label>
+                                  <input type="text" class="form-control" formControlName="postcode" id="text">
+                                </div>
+
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Country State</label>
+                                  <input type="text" class="form-control" formControlName="county" id="text">
+                                </div>
+
+                              </div>
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Country</label>
+                                  <select class="custom-select" formControlName="country">
+                                    <option *ngFor="let country of country_list">{{country.country_name }}</option>
+                                  </select>
+                                </div>
+
+                              </div>
+
+                            </div>
+                            <div class="row even">
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Primary Contact Name</label>
+                                  <input type="text" class="form-control" formControlName="client_name" id="prim">
+                                </div>
+
+                              </div>
+
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Primary Contact No</label>
+                                  <input type="text" class="form-control" formControlName="client_comms_contact_number"
+                                    id="client_comms_contact">
+                                </div>
+
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Primary Contact Email</label>
+                                  <input type="email" class="form-control" formControlName="client_comms_email"
+                                    id="client_comms_email">
+                                </div>
+
+                              </div>
+                            </div>
+                            <div class="row ">
+
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Tech Support contact Name</label>
+                                  <input type="text" class="form-control" formControlName="client_techSupp_name"
+                                    id="client_techSupp_name">
+                                </div>
+
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Tech Support contact No</label>
+                                  <input type="text" class="form-control"
+                                    formControlName="client_techSupp_contact_number" id="client_techSupp_contact">
+                                </div>
+
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Tech Support contact Email</label>
+                                  <input type="email" class="form-control" formControlName="client_techSupp_email"
+                                    id="techSupp_email">
+                                </div>
+
+                              </div>
+
+                            </div>
+                            <div class="row even">
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Finance contact Name</label>
+                                  <input type="text" class="form-control" formControlName="client_finance_contact_name"
+                                    id="text">
+                                </div>
+
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Finance contact No</label>
+                                  <input type="text" class="form-control"
+                                    formControlName="client_finance_contact_number" id="client_finance_contact">
+                                </div>
+
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Finance contact Email</label>
+                                  <input type="text" class="form-control" formControlName="client_finance_email"
+                                    id="client_finance_email">
+                                </div>
+
+                              </div>
+
+                            </div>
+                            <div class="row">
+
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Contract Signed By</label>
+                                  <input type="text" class="form-control" formControlName="contract_signed_by"
+                                    id="contract_signed">
+                                </div>
+
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          <div class="card-footer">
+
+
+                            <button class="btn btn-danger float-right ">Cancel</button>
+                            <button type="submit" class="btn btn-success float-right mr-10"
+                              (click)="onSave()">Save</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="custom-tabs-three-profile1" role="tabpanel"
+                      aria-labelledby="custom-tabs-three-profile-tab">
+                      <div class="card">
+                        <div class="card-header">
+                          <h3 class="card-title"><strong> Subscription Details</strong></h3>
+                        </div>
+                        <div class="card-body">
+                          <div class="table-responsive">
+                            <table id="example3" class="table table-bordered table-hover">
+                              <thead>
+                                <tr>
+                                  <th>Product</th>
+                                  <th>Service</th>
+                                  <th>Subscription Type</th>
+                                  <th>Payment Amount</th>
+                                  <th>Currency</th>
+                                  <th>Payment Date</th>
+                                  <th>Status</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>product1</td>
+                                  <td>Services</td>
+                                  <td>Subscription</td>
+                                  <td>Rs.1000</td>
+                                  <td>Inr</td>
+                                  <td>20/12/2021</td>
+                                  <td><span class="badge badge-success">Active</span></td>
+                                </tr>
+
+                              </tbody>
+
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="custom-tabs-three-messages1" role="tabpanel"
+                      aria-labelledby="custom-tabs-three-messages-tab">
+                      <div class="edit_block">
+                        <button type="submit" class="btn btn-warning">Edit</button>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h3 class="card-title"><strong> Users</strong></h3>
+                        </div>
+
+                        <div class="card-body">
+                          <div class="row even">
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name">First Name</label>
+                                <input type="text" class="form-control" id="text" placeholder="First Name">
+                              </div>
+
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name">Last Name </label>
+                                <input type="text" class="form-control" id="text" placeholder="Last Name">
+                              </div>
+
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name"></label>
+                                <select class="custom-select">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select>
+                              </div>
+
+                            </div>
+                          </div>
+
+                          <div class="row">
+
+
+
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name">Address Line 1</label>
+                                <input type="text" class="form-control" id="text" placeholder="address line 1">
+                              </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name">Address Line 2</label>
+                                <input type="text" class="form-control" id="text" placeholder="address line 2">
+                              </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name">Address Line 3</label>
+                                <input type="text" class="form-control" id="text" placeholder="address line 3">
+                              </div>
+
+                            </div>
+
+                          </div>
+                          <div class="row even">
+
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name">Post Code</label>
+                                <input type="text" class="form-control" id="text" placeholder="post code">
+                              </div>
+
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name">County</label>
+                                <select class="custom-select">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select>
+                              </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name">Country State</label>
+                                <input type="text" class="form-control" formControlName="county" id="text">
+                                <!-- <select class="custom-select">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select> -->
+                              </div>
+
+                            </div>
+
+                          </div>
+                          <div class="row ">
+
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="client_name">Primary Contact No</label>
+                                <input type="text" class="form-control" id="text" placeholder="primary contact no">
+                              </div>
+
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+
+                                <label for="client_name">Primary Email </label>
+                                <input type="text" class="form-control" id="text" placeholder="Primary emial">
+                              </div>
+
+                            </div>
+
+                          </div>
+                          <div class="row even">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="client_name">Secondary Contact No </label>
+                                <input type="text" class="form-control" id="text" placeholder="secondary contact no">
+                              </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="client_name">Secondary Email </label>
+                                <input type="text" class="form-control" id="text" placeholder="secondary email">
+                              </div>
+
+                            </div>
+
+
+
+
+                          </div>
+
+
+                          <div class="row even">
+
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="client_name">Login ID</label>
+                                <input type="text" class="form-control" id="text" placeholder="login id">
+                              </div>
+
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="client_name" class="hid_vis">example</label>
+                                <div class="clearfix"></div>
+                                <a href="#"><button type="button" class="btn btn-warning float-left mr-10">Password
+                                    Reset</button></a>
+                              </div>
+
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="card-footer">
+
+
+                          <button type="submit" class="btn btn-danger float-right ">Cancel</button>
+                          <button type="submit" class="btn btn-success float-right mr-10"
+                            (click)="onSave()">Save</button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                <div *ngIf="tab=='Client Subscription'" class="card-body">
+                  <div class="tab-content" id="custom-tabs-three-tabContent">
+                    <div class="tab-pane fade show active" id="custom-tabs-three-home1" role="tabpanel"
+                      aria-labelledby="custom-tabs-three-home-tab">
+                      <div class="col-md-12">
+                        <div class="edit_block">
+                          <button type="submit" class="btn btn-warning">Edit</button>
+                        </div>
+                        <!-- {{clientdetailForm.value|json}} -->
+                        <div class="card card-default" [formGroup]='clientdetailForm' (ngSubmit)="onSubmit()">
+                          <div class="card-header">
+                            <h3 class="card-title"><strong>Client Subscription</strong></h3>
+
+
+                          </div>
+                          <div class="card-body">
+                            <div class="row even">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="client_name">Client Name</label>
+                                  <input type="text" formControlName='client_name' class="form-control" id="client_name"
+                                    placeholder="Client Name" readonly>
+                                </div>
+
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="client_name">Client Status</label>
+                                  <select class="custom-select" formControlName="is_active" id="is_active" readonly>
+                                    <option>active</option>
+                                    <option>inactive</option>
+                                    <option>retiered</option>
+                                  </select>
+                                  <!-- <input type="text" class="form-control" formControlName="is_active" id="is_active" readonly> -->
+
+                                </div>
+
+                              </div>
+
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Client Website</label>
+                                  <input type="text" formControlName="client_website" class="form-control"
+                                    id="client_website" readonly>
+                                </div>
+
+                              </div>
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Client Logo</label>
+                                  <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="exampleInputFile" readonly>
+                                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <div class="col-md-4">
+
+
+                              </div>
+                            </div>
+
+
+                            <div class="row even">
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Registered Country</label>
+                                  <input type="text" class="form-control" formControlName="registered_in_country"
+                                    id="registered_in_country" readonly>
+                                </div>
+
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Registration ID</label>
+                                  <input type="text" class="form-control" formControlName="registration_id"
+                                    id="registration_id" readonly>
+                                </div>
+
+                              </div>
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Default Currency</label>
+                                  <input type="text" class="form-control" formControlName="default_currency_used"
+                                    id="default" readonly>
+                                </div>
+
+                              </div>
+                            </div>
+
+
+                            <div class="row">
+
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="client_name">VAT/GST/Tax Number</label>
+                                  <input type="text" class="form-control" formControlName="vat_number" id="VAT"
+                                    readonly>
+                                </div>
+
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="client_name">VAT %</label>
+                                  <input type="text" class="form-control" formControlName="VAT_used" id="used_vat"
+                                    readonly>
+                                </div>
+
+                              </div>
+
+
+                            </div>
+                            <div class="row even">
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Address Line 1</label>
+                                  <input type="text" class="form-control" formControlName='address_line_1' id="text"
+                                    readonly>
+                                </div>
+
+                              </div>
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Address Line 2</label>
+                                  <input type="text" class="form-control" formControlName='address_line_2' id="text"
+                                    readonly>
+                                </div>
+
+                              </div>
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Address Line 3</label>
+                                  <input type="text" class="form-control" formControlName='address_line_3' id="text"
+                                    readonly>
+                                </div>
+
+                              </div>
+                            </div>
+
+
+
+
+                            <div class="row">
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Pincode</label>
+                                  <input type="text" class="form-control" formControlName="postcode" id="text" readonly>
+                                </div>
+
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Country State</label>
+                                  <input type="text" class="form-control" formControlName="county" id="text">
+                                  <!-- <select class="custom-select">
+                                    <option>option 1</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+                                    <option>option 4</option>
+                                    <option>option 5</option>
+                                  </select> -->
+                                </div>
+
+                              </div>
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Country</label>
+                                  <select class="custom-select" formControlName="country">
+                                    <option *ngFor="let country of country_list">{{country.country_name }}</option>
+                                  </select>
+                                </div>
+
+                              </div>
+
+                            </div>
+                            <div class="row even">
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Primary Contact Name</label>
+                                  <input type="text" class="form-control" formControlName="client_name" id="prim"
+                                    readonly>
+                                </div>
+
+                              </div>
+
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Primary Contact No</label>
+                                  <input type="text" class="form-control" formControlName="client_comms_contact_number"
+                                    id="client_comms_contact" readonly>
+                                </div>
+
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Primary Contact Email</label>
+                                  <input type="email" class="form-control" formControlName="client_comms_email"
+                                    id="client_comms_email" readonly>
+                                </div>
+
+                              </div>
+                            </div>
+                            <div class="row ">
+
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Tech Support contact Name</label>
+                                  <input type="text" class="form-control" formControlName="client_techSupp_name"
+                                    id="client_techSupp_name" readonly>
+                                </div>
+
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Tech Support contact No</label>
+                                  <input type="text" class="form-control"
+                                    formControlName="client_techSupp_contact_number" id="client_techSupp_contact"
+                                    readonly>
+                                </div>
+
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Tech Support contact Email</label>
+                                  <input type="email" class="form-control" formControlName="client_techSupp_email"
+                                    id="techSupp_email" readonly>
+                                </div>
+
+                              </div>
+
+                            </div>
+                            <div class="row even">
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Finance contact Name</label>
+                                  <input type="text" class="form-control" formControlName="client_finance_contact_name"
+                                    id="text" readonly>
+                                </div>
+
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Finance contact No</label>
+                                  <input type="text" class="form-control"
+                                    formControlName="client_finance_contact_number" id="client_finance_contact"
+                                    readonly>
+                                </div>
+
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Finance contact Email</label>
+                                  <input type="text" class="form-control" formControlName="client_finance_email"
+                                    id="client_finance_email" readonly>
+                                </div>
+
+                              </div>
+
+
+
+                            </div>
+                            <div class="row">
+
+
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="client_name">Contract Signed By</label>
+                                  <input type="text" class="form-control" formControlName="contract_signed_by"
+                                    id="contract_signed" readonly>
+                                </div>
+
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          <div class="card-footer">
+
+
+                            <button class="btn btn-danger float-right ">Cancel</button>
+                            <button type="submit" class="btn btn-success float-right mr-10"
+                              [disabled]="!clientdetailForm.valid" (onClick)="onSave()">Save</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+                    <div class="tab-pane fade" id="custom-tabs-three-profile1" role="tabpanel"
+                      aria-labelledby="custom-tabs-three-profile-tab">
+                      <div class="card">
+                        <div class="card-header">
+                          <h3 class="card-title"><strong> Subscription Details</strong></h3>
+                        </div>
+                        <div class="card-body">
+                          <div class="table-responsive">
+                            <table id="example3" class="table table-bordered table-hover">
+                              <thead>
+                                <tr>
+                                  <th>Product</th>
+                                  <th>Service</th>
+                                  <th>Subscription Type</th>
+                                  <th>Payment Amount</th>
+                                  <th>Currency</th>
+                                  <th>Payment Date</th>
+                                  <th>Status</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>product1</td>
+                                  <td>Services</td>
+                                  <td>Subscription</td>
+                                  <td>Rs.1000</td>
+                                  <td>Inr</td>
+                                  <td>20/12/2021</td>
+                                  <td><span class="badge badge-success">Active</span></td>
+                                </tr>
+
+                              </tbody>
+
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="custom-tabs-three-messages1" role="tabpanel"
+                      aria-labelledby="custom-tabs-three-messages-tab">
+                      <div class="edit_block">
+                        <button type="submit" class="btn btn-warning">Edit</button>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <h3 class="card-title"><strong> Users</strong></h3>
+                        </div>
+
+                        <div class="card-body">
+                          <div class="row even">
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name">First Name</label>
+                                <input type="text" class="form-control" id="text" placeholder="First Name">
+                              </div>
+
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name">Last Name </label>
+                                <input type="text" class="form-control" id="text" placeholder="Last Name">
+                              </div>
+
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name"></label>
+                                <select class="custom-select">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select>
+                              </div>
+
+                            </div>
+                          </div>
+
+                          <div class="row">
+
+
+
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name">Address Line 1</label>
+                                <input type="text" class="form-control" id="text" placeholder="address line 1">
+                              </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name">Address Line 2</label>
+                                <input type="text" class="form-control" id="text" placeholder="address line 2">
+                              </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name">Address Line 3</label>
+                                <input type="text" class="form-control" id="text" placeholder="address line 3">
+                              </div>
+
+                            </div>
+
+                          </div>
+                          <div class="row even">
+
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name">Post Code</label>
+                                <input type="text" class="form-control" id="text" placeholder="post code">
+                              </div>
+
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name">County</label>
+                                <select class="custom-select">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select>
+                              </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="client_name">Country State</label>
+                                <input type="text" class="form-control" formControlName="county" id="text">
+                                <!-- <select class="custom-select">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select> -->
+                              </div>
+
+                            </div>
+
+                          </div>
+                          <div class="row ">
+
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="client_name">Primary Contact No</label>
+                                <input type="text" class="form-control" id="text" placeholder="primary contact no">
+                              </div>
+
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+
+                                <label for="client_name">Primary Email </label>
+                                <input type="text" class="form-control" id="text" placeholder="Primary emial">
+                              </div>
+
+                            </div>
+
+                          </div>
+                          <div class="row even">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="client_name">Secondary Contact No </label>
+                                <input type="text" class="form-control" id="text" placeholder="secondary contact no">
+                              </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="client_name">Secondary Email </label>
+                                <input type="text" class="form-control" id="text" placeholder="secondary email">
+                              </div>
+
+                            </div>
+
+
+
+
+                          </div>
+
+
+                          <div class="row even">
+
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="client_name">Login ID</label>
+                                <input type="text" class="form-control" id="text" placeholder="login id">
+                              </div>
+
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="client_name" class="hid_vis">example</label>
+                                <div class="clearfix"></div>
+                                <a href="#"><button type="button" class="btn btn-warning float-left mr-10">Password
+                                    Reset</button></a>
+                              </div>
+
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="card-footer">
+
+
+                          <button type="submit" class="btn btn-danger float-right ">Cancel</button>
+                          <button type="submit" class="btn btn-success float-right mr-10"
+                            (onClick)="onSave()">Save</button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+
+                <div *ngIf="tab=='Client Users'" class="card-body">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title"> Users</h3>
+                    </div>
+                    <div class="card-body">
+                      <section class="content">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <div class="form-group">
+                                <label>Search</label>
+
+                                <div class="input-group my-colorpicker2 colorpicker-element">
+                                  <input type="text" class="form-control" data-original-title="" title="">
+
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                            </div>
+                            <div class="col-md-3">
+                              <a href="client-dashboard/details/add" class="btn btn-md btn-success mt-30">Add</a>
+                            </div>
+
+                            <div class="col-md-12">
+                              <div class="card" *ngIf="users!= null">
+                                <div class="card-header border-transparent">
+                                  <h3 class="card-title"><strong>Top 10 Clients' Users List</strong></h3>
+                                </div>
+                                <div class="card-body p-0">
+                                  <div class="table-responsive">
+                                    <table class="table m-0">
+                                      <thead>
+                                        <tr>
+                                          <th>First Name</th>
+                                          <th>last Name</th>
+                                          <th>email</th>
+
+                                          <th></th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr *ngFor="let user of users; let i =index">
+                                          <td><a href="#">{{user.first_name}}</a></td>
+                                          <td><a href="#">{{user.last_name}}</a></td>
+                                          <td><a href="#">{{user.email}}</a></td>
+                                          <td><a href="#"></a></td>
+
+                                        </tr>
+
+
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <div class="card" *ngIf="users== null">
+                                <div class="card-header border-transparent">
+                                  <h3 class="card-title"><strong>No user listed</strong></h3>
+                                </div>
+                               
+  
+                              </div>
+                            </div>
+                          </div>
+
+
+                        </div>
+                      </section>
+
+                      <!-- <div class="table-responsive">
+                        <table id="example13" class="table table-bordered table-hover">
+
+                          <thead>
+                            <tr>
+                              <th>First Name</th>
+                              <th>Last Name</th>
+                              <th>Email ID</th>
+                              <th>Login ID</th>
+                              <th>Password</th>
+                              <th>Status</th>
+                              <th>Isadmin?</th>
+                              <th></th>
+
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let user of users; let i =index">
+                              <td contenteditable=true>{{user.first_name}}</td>
+                              <td readonly>{{user.last_name}}</td>
+                              <td readonly>{{user.email}}</td>
+                              <td readonly>{{user.login_id}}</td>
+                              <td readonly>{{user.password}}</td>
+                              <td readonly>{{user.status}}</td>
+                              <td>Yes</td>
+
+
+                              <td><a class="btn btn-warning btn-sm">
+                                  <i class="fas fa-pencil-alt"></i>Edit</a></td>
+
+                            </tr>
+
+                          </tbody>
+
+                        </table>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>

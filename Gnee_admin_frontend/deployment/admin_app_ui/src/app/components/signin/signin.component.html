@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+    
+    <div class="align-items-center d-flex flex-row log-cover">
+        <div  class="container">
+            <div class="justify-content-center row">
+                <div class="col-md-5">
+                    <form  class="align-self-center" style="background: #fff; margin: auto;" [formGroup]="signinForm" >
+                        <h1>Login</h1>
+                                    <p class="text-muted" *ngIf="isLoggedIn">Sign In to your account</p>
+                                    <p class="text-muted" *ngIf="!isLoggedIn" style="color: #ed4337 !important;;"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> {{error_message}}</p>
+                        
+                        <div class="container" style="color:#898a8b">
+                            <label for="Email"><b>Username</b></label>
+                            <input type="text"  name="Username" formControlName="user" required>
+            
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password"  name="psw" formControlName="password" required>
+                                
+                            <button type="submit" (click)="onLogin()" [disabled]="!signinForm.valid">Login</button>
+                            <label>
+                            <input type="checkbox"  name="remember"> Remember me
+                            </label>
+                            <label class="psw" style="float: right;">Forgot <a href="#">password?</a></label>
+                        </div>
+            
+                        </form>
+                </div>
+            </div>
+        </div>    
+    </div>
+</body>
+</html>

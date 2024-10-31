@@ -1,0 +1,29 @@
+<a href="#" class="brand-link logo_top">
+
+    <span>GneeAd</span>
+</a>
+
+<div class="sidebar">
+    <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+            <li (click)="selectTab(link.test)" class="nav-item" *ngFor="let link of presentlink">
+                <a [routerLink]="link.link" class="nav-link">
+                    <i class="fas fa-circle nav-icon"></i>
+                    <p>{{link.test}}</p>
+                </a>
+
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fas fa-circle nav-icon"></i>
+                    <p>{{item}}</p>
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+</div>

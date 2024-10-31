@@ -1,0 +1,103 @@
+<div class="wrapper">
+
+    <app-topbar></app-topbar>
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+        <app-sidebar></app-sidebar>
+    </aside>
+
+    <div class="content-wrapper">
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Roles</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/administrator">Admin</a></li>
+                            <li class="breadcrumb-item active">Role Onboarding</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label>Search</label>
+
+                            <div class="input-group my-colorpicker2 colorpicker-element">
+                                <input type="text" placeholder="Global Search" (input)="applyFilterGlobal($event, 'contains')" class="form-control" data-original-title="" title="">
+
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-3">
+                        <a href="administrator/roles/details/add" class="btn btn-md btn-success mt-30">Add</a>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="card">
+
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+
+                                    <p-table [value]="dataSource" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,20,30]" [showCurrentPageReport]="true" sortMode="multiple" paginatorPosition="bottom" [globalFilterFields]="['associateFullName','associateCountry']"
+                                        #dt>
+                                        <ng-template pTemplate="header">
+                                            <tr>
+                                                <th pSortableColumn="roleID">RoleID
+                                                    <p-sortIcon field="roleID"></p-sortIcon>
+                                                </th>
+                                                <th pSortableColumn="role">Role
+                                                    <p-sortIcon field="role"></p-sortIcon>
+                                                </th>
+                                                <th pSortableColumn="rolestatus">Status
+                                                    <p-sortIcon field="rolestatus"></p-sortIcon>
+
+                                                </th>
+                                                <th></th>
+                                            </tr>
+                                        </ng-template>
+                                        <ng-template pTemplate="body" let-respdata>
+                                            <p-confirmPopup></p-confirmPopup>
+                                            <tr [pSelectableRow]="respdata">
+                                                <td>{{respdata.roleID}}</td>
+                                                <td>{{respdata.role}}</td>
+                                                <td>
+                                                    {{respdata.rolestatus}}
+                                                </td>
+                                                <td>
+                                                    <a (click)="confirm($event,respdata.roleID)" class="btn btn-sm btn-danger float-right mr-2">Delete</a>
+                                                    <a href='administrator/roles/details/{{respdata.roleID}}/view' class="btn btn-sm btn-info float-right mr-2">View</a>
+                                                </td>
+                                            </tr>
+                                        </ng-template>
+                                    </p-table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </div>
+    <footer class="main-footer">
+        <strong>Copyright &copy; 2021-2022 <a href="#">Admin Panel Demo</a>.</strong> All rights reserved.
+
+    </footer>
+
+
+</div>

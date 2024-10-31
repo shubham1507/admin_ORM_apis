@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Role Details</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <link rel="stylesheet" href="dist/css/custom.css">
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
+<div class="wrapper">
+
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="dist/img/logo.png" alt="logo" height="100" width="100">
+  </div>
+
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="associate_dashboard.html" class="nav-link nav_active_admin">Admin</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="client_dashboard.html" class="nav-link ">Client Support</a>
+      </li>
+	    <li class="nav-item d-none d-sm-inline-block">
+        <a href="tech_support_dashboard.html" class="nav-link">Tech Support</a>
+      </li>
+	    <li class="nav-item d-none d-sm-inline-block">
+        <a href="finanace_dashboard.html" class="nav-link">Finance</a>
+      </li>
+	    <li class="nav-item d-none d-sm-inline-block">
+        <a href="reports_dashboard.html" class="nav-link">Reports</a>
+      </li>
+	
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+   
+    
+    </ul>
+  </nav>
+
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="#" class="brand-link logo_top">
+      
+      <span>GneeAd</span>
+    </a>
+
+    <div class="sidebar">
+   
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+  
+       
+	  
+		  
+		
+     
+	    <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>Role Details</p>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="content-wrapper">
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Role Details</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Admin</a></li>
+              <li class="breadcrumb-item active">Role Details </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="content">
+      <div class="container">
+	  <div class="row">
+	  
+	  
+	  					     <div class="col-12 ">
+            <div class="card card-primary card-outline card-tabs">
+              <div class="card-header p-0 pt-1 border-bottom-0">
+                <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home1" role="tab" aria-controls="custom-tabs-three-home1" aria-selected="true">Role Details</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="custom-tabs-three-profile-tab" data-toggle="pill" href="#custom-tabs-three-profile1" role="tab" aria-controls="custom-tabs-three-profile1" aria-selected="false">Permissions</a>
+                  </li>
+                              
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content" id="custom-tabs-three-tabContent">
+                  <div class="tab-pane fade show active" id="custom-tabs-three-home1" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                    	  <div class="col-md-12">
+						  <div class="edit_block">
+						  		   <button type="submit" class="btn btn-warning">Edit</button>
+								   </div>
+
+   <div class="card card-default">
+          <div class="card-header">
+            <h3 class="card-title"><strong>Role Details</strong></h3>
+
+    
+          </div>
+          <div class="card-body">
+            <div class="row">
+			<div class="col-md-7">
+			<div class="form-group">
+			<div class="row">
+			<div class="col-md-4">
+			<label for="client_name">Role Name</label>
+			</div>
+			<div class="col-md-8">
+		    <input type="text" class="form-control" id="text" placeholder="role name">
+					</div>
+			</div>
+                  </div>
+			
+			</div>
+			<div class="col-md-7">
+			<div class="form-group">
+			<div class="row">
+			<div class="col-md-4">
+			<label for="client_name">Description</label>
+			</div>
+			<div class="col-md-8">
+		   <textarea  rows="4" cols="50" class="form-control">
+			
+			</textarea>
+					</div>
+			</div>
+                  </div>
+			
+			</div>
+				<div class="col-md-7">
+			<div class="form-group">
+			<div class="row">
+			<div class="col-md-4">
+			<label for="client_name">Status</label>
+			</div>
+			<div class="col-md-8">
+                <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch>
+					</div>
+			</div>
+                  </div>
+			
+			</div>
+			
+			</div>
+	
+		  </div>
+		  
+		  <div class="card-footer">
+		   
+		   
+		   <button type="submit" class="btn btn-danger float-right ">Cancel</button>
+		   <button type="submit" class="btn btn-success float-right mr-10">Save</button>
+          </div>
+       
+        </div>  
+			            </div> 
+                  </div>
+                  <div class="tab-pane fade" id="custom-tabs-three-profile1" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
+				    <div class="edit_block">
+						  		   <button type="submit" class="btn btn-warning">Edit</button>
+								   </div>
+                		  <div class="card">
+              <div class="card-header">
+                <h3 class="card-title"> Premissions</h3>
+              </div>
+              <div class="card-body">
+			     <div class="row">
+			<div class="col-md-7">
+			<div class="form-group">
+			<div class="row">
+			<div class="col-md-4">
+			<label for="client_name">Role Name</label>
+			</div>
+			<div class="col-md-8">
+		    <p>Admin</p>
+					</div>
+			</div>
+                  </div>
+			
+			</div>
+			
+	
+			
+			
+				<div class="col-md-7">
+			<div class="form-group">
+			<div class="row">
+			<div class="col-md-4">
+			<label for="client_name">Administration</label>
+			</div>
+			<div class="col-md-8">
+<div class="form-check form-check-inline border_input_types">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+  <label class="form-check-label" for="inlineRadio1">No Access</label>
+</div>
+<div class="form-check form-check-inline border_input_types">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+  <label class="form-check-label" for="inlineRadio2">Read Only</label>
+</div>
+<div class="form-check form-check-inline border_input_types">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+  <label class="form-check-label" for="inlineRadio3">Edit</label>
+</div>
+					</div>
+			</div>
+                  </div>
+			
+			</div>
+			
+			
+			
+					<div class="col-md-7">
+			<div class="form-group">
+			<div class="row">
+			<div class="col-md-4">
+			<label for="client_name">Client Support</label>
+			</div>
+			<div class="col-md-8">
+<div class="form-check form-check-inline border_input_types">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="inlineRadio4" value="option4">
+  <label class="form-check-label" for="inlineRadio4">No Access</label>
+</div>
+<div class="form-check form-check-inline border_input_types">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="inlineRadio5" value="option5">
+  <label class="form-check-label" for="inlineRadio5">Read Only</label>
+</div>
+<div class="form-check form-check-inline border_input_types">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="inlineRadio6" value="option6">
+  <label class="form-check-label" for="inlineRadio6">Edit</label>
+</div>
+					</div>
+			</div>
+                  </div>
+			
+			</div>
+			
+					<div class="col-md-7">
+			<div class="form-group">
+			<div class="row">
+			<div class="col-md-4">
+			<label for="client_name">Tech Support</label>
+			</div>
+			<div class="col-md-8">
+<div class="form-check form-check-inline border_input_types">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions13" id="inlineRadio7" value="option7">
+  <label class="form-check-label" for="inlineRadio7">No Access</label>
+</div>
+<div class="form-check form-check-inline border_input_types">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions13" id="inlineRadio8" value="option8">
+  <label class="form-check-label" for="inlineRadio8">Read Only</label>
+</div>
+<div class="form-check form-check-inline border_input_types">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions13" id="inlineRadio9" value="option9">
+  <label class="form-check-label" for="inlineRadio9">Edit</label>
+</div>
+					</div>
+			</div>
+                  </div>
+			
+			</div>
+			
+						<div class="col-md-7">
+			<div class="form-group">
+			<div class="row">
+			<div class="col-md-4">
+			<label for="client_name">Finance</label>
+			</div>
+			<div class="col-md-8">
+<div class="form-check form-check-inline border_input_types">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions14" id="inlineRadio10" value="option10">
+  <label class="form-check-label" for="inlineRadio10">No Access</label>
+</div>
+<div class="form-check form-check-inline border_input_types">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions14" id="inlineRadio11" value="option11">
+  <label class="form-check-label" for="inlineRadio11">Read Only</label>
+</div>
+<div class="form-check form-check-inline border_input_types">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions14" id="inlineRadio12" value="option12">
+  <label class="form-check-label" for="inlineRadio12">Edit</label>
+</div>
+					</div>
+			</div>
+                  </div>
+			
+			</div>
+			
+			
+						<div class="col-md-7">
+			<div class="form-group">
+			<div class="row">
+			<div class="col-md-4">
+			<label for="client_name">Reports</label>
+			</div>
+			<div class="col-md-8">
+			<div class="border_input_types repo_block">
+			<div class="mb-10">
+			<div class="row">
+			<div class="col-md-8">
+			<label for="client_name mb-10">Admin Report</label>
+			</div>
+			<div class="col-md-4 text-center">
+            <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch>
+		
+			</div>
+			</div>
+				</div>
+				
+							<div class="mb-10">
+				<div class="row">
+			<div class="col-md-8">
+			<label for="client_name mb-10">Client Support Report</label>
+			</div>
+			<div class="col-md-4 text-center">
+            <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch>
+		
+			</div>
+			</div>
+			</div>
+			
+						<div class="mb-10">
+
+				<div class="row">
+			<div class="col-md-8">
+			<label for="client_name mb-10">Tech Support Report</label>
+			</div>
+			<div class="col-md-4 text-center">
+            <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch>
+		
+			</div>
+			</div>
+			</div>
+			
+			
+						<div class="">
+
+			<div class="row">
+			<div class="col-md-8">
+			<label for="client_name mb-10">Finance Report</label>
+			</div>
+			<div class="col-md-4 text-center">
+            <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch>
+		
+			</div>
+			</div>
+			</div>
+
+					</div>
+					</div>
+				
+				
+			</div>
+                  </div>
+			
+			</div>
+			</div>
+			 
+              </div>
+			    <div class="card-footer">
+		   
+		   
+		   <button type="submit" class="btn btn-danger float-right ">Cancel</button>
+		   <button type="submit" class="btn btn-success float-right mr-10">Save</button>
+          </div>
+            </div>
+                  </div>
+       
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+	
+
+						     <div class="col-12 ">
+            <div class="card card-primary card-outline card-tabs">
+              <div class="card-header p-0 pt-1 border-bottom-0">
+                <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">History</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content" id="custom-tabs-three-tabContent">
+                  <div class="tab-pane fade show active" id="custom-tabs-three-home" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                    History Coming Soon
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+							  </div>
+
+
+      </div>
+    </section>
+  </div>
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2021-2022 <a href="#">Admin Panel Demo</a>.</strong>
+    All rights reserved.
+   
+  </footer>
+
+
+  
+</div>
+
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/select2/js/select2.full.min.js"></script>
+<script src="plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/inputmask/jquery.inputmask.min.js"></script>
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<script src="plugins/bs-stepper/js/bs-stepper.min.js"></script>
+<script src="plugins/dropzone/min/dropzone.min.js"></script>
+<script src="dist/js/main.js"></script>
+<script src="dist/js/demo.js"></script>
+<script>
+  $(function () {
+ 
+    $("input[data-bootstrap-switch]").each(function(){
+      $(this).bootstrapSwitch('state', $(this).prop('checked'));
+    })
+
+  })
+</script>
+</body>
+</html>

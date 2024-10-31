@@ -1,0 +1,44 @@
+{
+  "login": [
+    {
+      "id": 1,
+      "user": "yash",
+      "password": "sahita"
+    },
+    {
+      "user": "yash",
+      "password": "sahita",
+      "id": 2
+    },
+    {
+      "user": "yash",
+      "password": "sahita",
+      "id": 3
+    },
+    {
+      "user": "yash",
+      "password": "sahita",
+      "id": 4
+    },
+    {
+      "user": "yash",
+      "password": "sahita",
+      "id": 5
+    },
+    {
+      "user": "yash",
+      "password": "sahita",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

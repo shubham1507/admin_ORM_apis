@@ -1,0 +1,1092 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+        <!-- Bootstrap/Custom CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="css/all.min.css" />
+        <title>Gneewise</title>
+    </head>
+    <body>
+        <!--Top Header Stripbar Start-->
+        <div id="headerStrip" class="container-fluid">
+            <div class="d-flex align-items-center h-100">
+                <div class="boxOne">
+                    <div class="d-flex">
+                        <span class="logoWrapper">Client Logo</span>
+                    </div>
+                </div>
+                <div class="boxTwo">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#Osteoarthritis" role="tab" aria-controls="osteoarthritis" aria-selected="true">Osteoarthritis</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#Trauma" role="tab" aria-controls="trauma" aria-selected="false">Trauma</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#Cancer" role="tab" aria-controls="cancer" aria-selected="false">Cancer</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="boxThree">
+                    <div class="d-flex contentBox">
+                        <div class="brandName">Gneewise</div>
+                        <ul class="m-0 p-0 text-right">
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.918" height="16" viewBox="0 0 15.918 16">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: none;
+                                                }
+
+                                                .cls-2 {
+                                                    clip-path: url(#clip-path);
+                                                }
+
+                                                .cls-3 {
+                                                    fill: #333 !important;
+                                                    fill-rule: evenodd;
+                                                }
+                                            </style>
+                                            <clipPath id="clip-path">
+                                                <rect class="cls-1" width="15.918" height="16" />
+                                            </clipPath>
+                                        </defs>
+                                        <g id="Notifications" class="cls-2">
+                                            <path
+                                                id="Path_1"
+                                                data-name="Path 1"
+                                                class="cls-3"
+                                                d="M15,14H10a2,2,0,0,1-4,0H1a.961.961,0,0,1-.9-.7,1.068,1.068,0,0,1,.3-1.1A4.026,4.026,0,0,0,2,9V6A6,6,0,0,1,14,6V9a4.026,4.026,0,0,0,1.6,3.2.947.947,0,0,1,.3,1.1A.961.961,0,0,1,15,14Z"
+                                                transform="translate(-0.063)"
+                                            />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: none;
+                                                }
+
+                                                .cls-2 {
+                                                    clip-path: url(#clip-path);
+                                                }
+
+                                                .cls-3 {
+                                                    fill: #fff;
+                                                }
+                                            </style>
+                                            <clipPath id="clip-path">
+                                                <rect class="cls-1" width="16" height="16" />
+                                            </clipPath>
+                                        </defs>
+                                        <g id="Component_9_1" data-name="Component 9 – 1" class="cls-2">
+                                            <path id="Union_1" data-name="Union 1" class="cls-3" d="M0,16V14c0-2.2,3.6-4,8-4s8,1.8,8,4v2ZM4,4A4,4,0,1,1,8,8,4,4,0,0,1,4,4Z" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Top Header Stripbar End-->
+
+        <div class="wrapper">
+            <!--Left Sidebar Start-->
+            <sidebar id="sidebar" class="leftSidebar">
+                <h3 class="m-0">
+                    Patient Information <span class="collapseMenu"><i id="sidebarCollapse1" class="fas fa-bars"></i></span>
+                </h3>
+                <form>
+                    <div class="formWrapper">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="patientId">Patient ID</label>
+                            <input type="text" class="form-control" id="patientId" />
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <div class="radioSection">
+                                <div class="form-check form-check-inline">
+                                    Male
+                                    <input class="form-check-input" type="radio" name="radio" checked="checked" />
+                                    <span class="checkmark"></span>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    Female
+                                    <input class="form-check-input" type="radio" name="radio" />
+                                    <span class="checkmark"></span>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    Other
+                                    <input class="form-check-input" type="radio" name="radio" />
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group dobSection">
+                            <label for="gender">Date Of Birth</label>
+                            <div class="input-group date form_date" id="datetimepicker1" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                <input type="text" class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar">
+                                        <svg id="Group_1362" data-name="Group 1362" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+                                            <defs>
+                                                <style>
+                                                    .cls-1 {
+                                                        fill: #fff;
+                                                    }
+                                                </style>
+                                            </defs>
+                                            <path
+                                                id="Path_287"
+                                                data-name="Path 287"
+                                                class="cls-1"
+                                                d="M32.3,0H5.7A5.6,5.6,0,0,0,0,5.7V32.3A5.6,5.6,0,0,0,5.7,38H32.3A5.6,5.6,0,0,0,38,32.3V5.7A5.6,5.6,0,0,0,32.3,0ZM5.7,3.8H32.3a1.8,1.8,0,0,1,1.9,1.9V7.6H3.8V5.7A1.8,1.8,0,0,1,5.7,3.8ZM32.3,34.2H5.7a1.8,1.8,0,0,1-1.9-1.9V11.4H34.2V32.3A1.8,1.8,0,0,1,32.3,34.2Z"
+                                            />
+                                            <path id="Path_288" data-name="Path 288" class="cls-1" d="M9,8h3.8v3.8H9Z" transform="translate(8.1 7.2)" />
+                                            <path id="Path_289" data-name="Path 289" class="cls-1" d="M13,8h3.8v3.8H13Z" transform="translate(11.699 7.2)" />
+                                            <path id="Path_290" data-name="Path 290" class="cls-1" d="M5,11H8.8v3.8H5Z" transform="translate(4.5 9.9)" />
+                                            <path id="Path_291" data-name="Path 291" class="cls-1" d="M9,11h3.8v3.8H9Z" transform="translate(8.1 9.9)" />
+                                            <path id="Path_292" data-name="Path 292" class="cls-1" d="M13,11h3.8v3.8H13Z" transform="translate(11.699 9.9)" />
+                                            <path id="Path_293" data-name="Path 293" class="cls-1" d="M5,14H8.8v3.8H5Z" transform="translate(4.5 12.599)" />
+                                            <path id="Path_294" data-name="Path 294" class="cls-1" d="M9,14h3.8v3.8H9Z" transform="translate(8.1 12.599)" />
+                                        </svg>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailId">E-mail</label>
+                            <input type="email" class="form-control" id="emailId" />
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number</label>
+                            <input type="text" class="form-control" id="mobile" />
+                        </div>
+                        <hr class="mt-3 mb-2" />
+                        <div class="form-group uploadSection mb-3">
+                            <label for="mobile">Upload X-Ray</label>
+                            <div class="input-group mb-1">
+                                <input id="uploadFile" class="" />
+                                <div class="fileUpload">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="43.049" height="38" viewBox="0 0 43.049 38">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #fff;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path
+                                            id="open-folder-with-document_1_"
+                                            data-name="open-folder-with-document (1)"
+                                            class="cls-1"
+                                            d="M40.288,43.7h0l-.75,3.677A2.794,2.794,0,0,1,36.8,49.616H4.389a2.794,2.794,0,0,1-2.738-3.353L4.768,30.987a2.949,2.949,0,0,1,1.987-2.216h0c.071-.023.143-.043.215-.061l.011,0c.068-.016.137-.03.207-.042l.066-.009c.054-.008.108-.015.162-.02.08-.007.161-.011.242-.011H41.643a1.406,1.406,0,0,1,1.405,1.364,1.424,1.424,0,0,1-.028.323Zm-.014-17.25a2.476,2.476,0,0,0-2.459-2.213H36.688v2.213Zm-37.635,4.1a5.145,5.145,0,0,1,4.116-4.018V20.549H2.9A2.9,2.9,0,0,0,0,23.45V43.484ZM34.515,12.836V26.454H8.928V12.836a1.222,1.222,0,0,1,1.22-1.22H33.295A1.221,1.221,0,0,1,34.515,12.836Zm-3.127,9.623A1.087,1.087,0,0,0,30.3,21.372H13.142a1.087,1.087,0,0,0,0,2.173H30.3A1.087,1.087,0,0,0,31.387,22.459Zm0-5.611A1.087,1.087,0,0,0,30.3,15.761H13.142a1.087,1.087,0,1,0,0,2.173H30.3A1.087,1.087,0,0,0,31.387,16.848Z"
+                                            transform="translate(0 -11.616)"
+                                        />
+                                    </svg>
+                                    <input id="uploadBtn" type="file" class="upload" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group toggleSection mb-0">
+                            <div class="custom-control custom-switch pl-0">
+                                <label>Allow X-Ray to be used for training</label>
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1" />
+                                <label class="custom-control-label" for="customSwitch1"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="m-0">Osteoarthritis Focus Area</h3>
+                    <div class="formWrapper mt-2">
+                        <div class="form-group">
+                            <div class="radioSection">
+                                <div class="form-check form-check-inline">
+                                    Knee
+                                    <input class="form-check-input" type="radio" name="radio2" checked="checked" />
+                                    <span class="checkmark"></span>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    Hip
+                                    <input class="form-check-input" type="radio" name="radio2" />
+                                    <span class="checkmark"></span>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    Ankle
+                                    <input class="form-check-input" type="radio" name="radio2" />
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mt-4">
+                            <div class="form-inline selectddSection">
+                                <div class="btn-group">
+                                    <button class="btn btn-primary" type="button">
+                                        Right
+                                    </button>
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Option 1</a>
+                                        <a class="dropdown-item" href="#">Option 2</a>
+                                        <a class="dropdown-item" href="#">Option 3</a>
+                                    </div>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-primary" type="button">
+                                        Lateral
+                                    </button>
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Option 1</a>
+                                        <a class="dropdown-item" href="#">Option 2</a>
+                                        <a class="dropdown-item" href="#">Option 3</a>
+                                    </div>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-primary" type="button">
+                                        Weighted
+                                    </button>
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Option 1</a>
+                                        <a class="dropdown-item" href="#">Option 2</a>
+                                        <a class="dropdown-item" href="#">Option 3</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-block processXray mt-5">
+                            Process X-Ray
+                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="11.246" viewBox="0 0 38 11.246">
+                                <defs>
+                                    <style>
+                                        .cls-f {
+                                            fill: #fff !important;
+                                        }
+                                    </style>
+                                </defs>
+                                <path
+                                    id="Path_281"
+                                    data-name="Path 281"
+                                    class="cls-f"
+                                    d="M65.828,300.279,64.4,302.533l1.917,1.684H62.1A5,5,0,0,0,57.486,300H45.565a5,5,0,0,0-4.618,4.217H33.872v2.811h7.076a5,5,0,0,0,4.618,4.217H57.486a5,5,0,0,0,4.618-4.217h4.217L64.4,308.713l1.424,2.254,6.043-5.344Zm-8.342,8.156H45.565a2.85,2.85,0,0,1,0-5.623H57.486a2.85,2.85,0,0,1,0,5.623Zm0,0"
+                                    transform="translate(-33.872 -300)"
+                                />
+                            </svg>
+                        </button>
+                        <hr />
+                        <button class="btn btn-block newScan">
+                            New Scan
+                            <svg id="new-document_1_" data-name="new-document (1)" xmlns="http://www.w3.org/2000/svg" width="16.93" height="20" viewBox="0 0 16.93 20">
+                                <defs>
+                                    <style>
+                                        .cls-f {
+                                            fill: #fff;
+                                        }
+                                    </style>
+                                </defs>
+                                <g id="Group_1372" data-name="Group 1372" transform="translate(0)">
+                                    <g id="Group_1371" data-name="Group 1371">
+                                        <path
+                                            id="Path_305"
+                                            data-name="Path 305"
+                                            class="cls-f"
+                                            d="M12.1,17.486V20H1.672A1.687,1.687,0,0,1,0,18.3V1.676A1.667,1.667,0,0,1,1.672,0H15.255A1.669,1.669,0,0,1,16.93,1.676v13.46H14.44A2.356,2.356,0,0,0,12.1,17.486Zm-.6-8.8H9.757V6.946a1.292,1.292,0,1,0-2.584,0V8.684H5.428a1.3,1.3,0,1,0,0,2.608H7.173v1.739a1.292,1.292,0,1,0,2.584,0V11.292H11.5a1.3,1.3,0,0,0,0-2.608Z"
+                                            transform="translate(0)"
+                                        />
+                                        <path id="Path_306" data-name="Path 306" class="cls-f" d="M0,3.542v-2.5A1.045,1.045,0,0,1,1.036,0h2.49V.024Z" transform="translate(13.404 16.443)" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <div class="leftSidebarToggleStrip"><span></span></div>
+            </sidebar>
+            <!--Left Sidebar End-->
+            <!--Middle Section of Page Start-->
+            <div id="content">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="Osteoarthritis" role="tabpanel" aria-labelledby="osteoarthritis-tab">
+                        <div class="iconLayer">
+                            <ul>
+                                <li class="first_child">
+                                    <span>Layers</span>
+                                    <svg id="Group_1377" data-name="Group 1377" xmlns="http://www.w3.org/2000/svg" width="44.289" height="38" viewBox="0 0 44.289 38">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #5c5c5c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path
+                                            id="Path_308"
+                                            data-name="Path 308"
+                                            class="disabled_icon"
+                                            d="M43.986,52a41.994,41.994,0,0,0-9.566-9.109l6.241-6.241a1.582,1.582,0,1,0-2.2-2.275l-.039.039-6.819,6.812a20.454,20.454,0,0,0-9.462-2.531C10.123,38.691.7,51.452.3,52a1.582,1.582,0,0,0,0,1.86,42,42,0,0,0,9.566,9.109L3.627,69.207a1.582,1.582,0,0,0,2.2,2.275l.039-.039,6.819-6.812a20.454,20.454,0,0,0,9.462,2.531c12.021,0,21.447-12.761,21.842-13.305A1.581,1.581,0,0,0,43.986,52ZM12.169,60.671A39.383,39.383,0,0,1,3.6,52.926c2.328-2.82,9.879-11.072,18.547-11.072a16.743,16.743,0,0,1,7.1,1.74L26.5,46.34A7.9,7.9,0,0,0,15.553,57.286Zm14.247-9.777a4.667,4.667,0,0,1,.475,2.033,4.745,4.745,0,0,1-4.745,4.745,4.667,4.667,0,0,1-2.033-.475Zm-8.541,4.065a4.667,4.667,0,0,1-.475-2.033,4.745,4.745,0,0,1,4.745-4.745,4.667,4.667,0,0,1,2.033.475ZM22.145,64a16.743,16.743,0,0,1-7.1-1.74l2.746-2.746A7.9,7.9,0,0,0,28.736,48.567l3.385-3.385a39.387,39.387,0,0,1,8.571,7.744C38.363,55.747,30.812,64,22.145,64Z"
+                                            transform="translate(0 -33.926)"
+                                        />
+                                    </svg>
+                                </li>
+                                <li>
+                                    <span>View</span>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                        width="1em"
+                                        height="1em"
+                                        style="-ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg);"
+                                        preserveAspectRatio="xMidYMid meet"
+                                        viewBox="0 0 256 256"
+                                    >
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #5c5c5c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path
+                                            d="M159.997 116a12 12 0 0 1-12 12h-20v20a12 12 0 0 1-24 0v-20h-20a12 12 0 0 1 0-24h20V84a12 12 0 0 1 24 0v20h20a12 12 0 0 1 12 12zm72.48 116.482a12 12 0 0 1-16.971 0l-40.679-40.678a96.105 96.105 0 1 1 16.972-16.97l40.678 40.678a12 12 0 0 1 0 16.97zm-116.48-44.486a72 72 0 1 0-72-72a72.081 72.081 0 0 0 72 72z"
+                                            class="cls-1"
+                                        />
+                                    </svg>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #5c5c5c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path
+                                            d="M159.997 116a12 12 0 0 1-12 12h-64a12 12 0 0 1 0-24h64a12 12 0 0 1 12 12zm72.48 116.483a12 12 0 0 1-16.971 0l-40.679-40.678a96.105 96.105 0 1 1 16.972-16.97l40.678 40.678a12 12 0 0 1 0 16.97zm-116.48-44.486a72 72 0 1 0-72-72a72.081 72.081 0 0 0 72 72z"
+                                            class="cls-1"
+                                        />
+                                    </svg>
+
+                                    <!--      <svg xmlns="http://www.w3.org/2000/svg" width="38.001" height="38" viewBox="0 0 38.001 38" data-toggle="popover" data-placement="bottom" data-content="<img src='images/pusminus.jpg'>">
+                                    <defs>
+                                        <style>
+                                            .cls-1 {
+                                                fill: #fff;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <g id="Group_1419" data-name="Group 1419" transform="translate(-783.33 -77.287)">
+                                        <path id="Path_261" data-name="Path 261" class="cls-1" d="M8.811,297.47,1.3,304.982a4.434,4.434,0,0,0,6.271,6.27l7.507-7.508a17.095,17.095,0,0,1-6.265-6.274Z" transform="translate(783.33 -197.263)" />
+                                        <path id="Path_262" data-name="Path 262" class="cls-1" d="M142.76,4.238A14.454,14.454,0,0,0,122.319,24.68,14.454,14.454,0,1,0,142.76,4.238Zm-2.694,17.75a10.645,10.645,0,1,1,3.119-7.527A10.576,10.576,0,0,1,140.066,21.987Z" transform="translate(674.337 77.282)" />
+                                    </g>
+                                </svg> -->
+                                    <svg id="Group_27" data-name="Group 27" xmlns="http://www.w3.org/2000/svg" width="31.465" height="38" viewBox="0 0 31.465 38">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #5c5c5c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path
+                                            id="Path_233"
+                                            data-name="Path 233"
+                                            class="disabled_icon"
+                                            d="M62.295,11.133,51.172,0,40.05,11.133a15.733,15.733,0,1,0,22.245,0ZM51.172,34.056a11.8,11.8,0,0,1-8.339-20.151l8.339-8.339Z"
+                                            transform="translate(-35.44)"
+                                        />
+                                    </svg>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    aria-hidden="true"
+    focusable="false"
+    width="1em"
+    height="1em"
+    style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+>
+    <path d="M12 20c-2.21 0-4.21-.9-5.66-2.34L17.66 6.34A8.014 8.014 0 0 1 20 12a8 8 0 0 1-8 8M6 8h2V6h1.5v2h2v1.5h-2v2H8v-2H6M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 14h5v-1.5h-5V16z" fill="#626262" />
+</svg>
+
+
+<!--                                     <img src="images/contrast.png" class="img-fluid" data-toggle="popover" data-placement="bottom" data-content="<img src='images/pusminus.jpg'>" />
+ -->                                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" data-toggle="popover" data-placement="bottom" data-content="<img src='images/pusminus.jpg'>">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #5c5c5c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g id="Group_1422" data-name="Group 1422" transform="translate(-917.699 -77.099)">
+                                            <path id="XMLID_460_" class="cls-1" d="M107.613,100a7.609,7.609,0,1,0,7.61,7.609A7.618,7.618,0,0,0,107.613,100Z" transform="translate(829.086 -11.511)" />
+                                            <path id="XMLID_461_" class="cls-1" d="M153.512,6.439V1.756a1.756,1.756,0,0,0-3.512,0V6.439a1.756,1.756,0,0,0,3.512,0Z" transform="translate(784.943 77.099)" />
+                                            <path id="XMLID_462_" class="cls-1" d="M150,261.756v4.683a1.756,1.756,0,0,0,3.512,0v-4.683a1.756,1.756,0,1,0-3.512,0Z" transform="translate(784.943 -153.096)" />
+                                            <path id="XMLID_463_" class="cls-1" d="M266.439,150h-4.683a1.756,1.756,0,0,0,0,3.512h4.683a1.756,1.756,0,1,0,0-3.512Z" transform="translate(687.504 -55.657)" />
+                                            <path id="XMLID_464_" class="cls-1" d="M1.756,153.512H6.439a1.756,1.756,0,0,0,0-3.512H1.756a1.756,1.756,0,0,0,0,3.512Z" transform="translate(917.699 -55.657)" />
+                                            <path
+                                                id="XMLID_466_"
+                                                class="cls-1"
+                                                d="M234.09,44.448a1.756,1.756,0,0,0-2.483,0L228.3,47.76a1.756,1.756,0,0,0,2.484,2.483l3.311-3.311A1.756,1.756,0,0,0,234.09,44.448Z"
+                                                transform="translate(715.951 38.308)"
+                                            />
+                                            <path
+                                                id="XMLID_467_"
+                                                class="cls-1"
+                                                d="M44.448,234.091a1.756,1.756,0,0,0,2.483,0l3.311-3.311a1.756,1.756,0,1,0-2.484-2.483l-3.311,3.311A1.756,1.756,0,0,0,44.448,234.091Z"
+                                                transform="translate(878.909 -124.65)"
+                                            />
+                                            <path
+                                                id="XMLID_468_"
+                                                class="cls-1"
+                                                d="M228.3,228.3a1.756,1.756,0,0,0,0,2.483l3.311,3.311a1.756,1.756,0,0,0,2.483-2.483l-3.311-3.311A1.756,1.756,0,0,0,228.3,228.3Z"
+                                                transform="translate(715.951 -124.649)"
+                                            />
+                                            <path
+                                                id="XMLID_469_"
+                                                class="cls-1"
+                                                d="M50.242,50.243a1.756,1.756,0,0,0,0-2.483l-3.311-3.311a1.756,1.756,0,0,0-2.484,2.483l3.311,3.311a1.756,1.756,0,0,0,2.483,0Z"
+                                                transform="translate(878.909 38.308)"
+                                            />
+                                        </g>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <span>Transform</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="38.001" height="38" viewBox="0 0 38.001 38" data-toggle="popover" data-placement="bottom" data-content="<img src='images/arrows.jpg'>">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #5c5c5c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g id="Group_1423" data-name="Group 1423" transform="translate(-989 -78.525)">
+                                            <path
+                                                id="Path_312"
+                                                data-name="Path 312"
+                                                class="cls-1"
+                                                d="M359.666,152.445a1.094,1.094,0,0,1,0,1.555l-7.07,7.07a1.1,1.1,0,0,1-1.878-.777v-5.97h-2.758a6.9,6.9,0,0,0,0-2.2h2.758v-5.97a1.1,1.1,0,0,1,1.878-.777Zm0,0"
+                                                transform="translate(667.011 -55.7)"
+                                            />
+                                            <path
+                                                id="Path_313"
+                                                data-name="Path 313"
+                                                class="cls-1"
+                                                d="M160.588,7.882a1.1,1.1,0,0,1-.777,1.878h-5.97v2.758a6.9,6.9,0,0,0-2.2,0V9.759h-5.97a1.1,1.1,0,0,1-.777-1.878l7.07-7.07a1.106,1.106,0,0,1,1.555,0Zm0,0"
+                                                transform="translate(855.257 78.032)"
+                                            />
+                                            <path
+                                                id="Path_314"
+                                                data-name="Path 314"
+                                                class="cls-1"
+                                                d="M159.811,351.2a1.1,1.1,0,0,1,.777,1.878l-7.07,7.07a1.093,1.093,0,0,1-1.555,0l-7.07-7.07a1.1,1.1,0,0,1,.777-1.878h5.97v-2.757a6.926,6.926,0,0,0,2.2,0V351.2Zm0,0"
+                                                transform="translate(855.257 -243.949)"
+                                            />
+                                            <path id="Path_315" data-name="Path 315" class="cls-1" d="M197.4,193.242a4.635,4.635,0,1,1-4.635,4.635A4.645,4.645,0,0,1,197.4,193.242Zm0,0" transform="translate(810.602 -100.355)" />
+                                            <path
+                                                id="Path_316"
+                                                data-name="Path 316"
+                                                class="cls-1"
+                                                d="M9.267,152.064h2.757a6.924,6.924,0,0,0,0,2.2H9.267v5.97a1.1,1.1,0,0,1-1.878.777L4.28,157.9v-.191a1.117,1.117,0,0,1-.47-.279L.32,153.941a1.1,1.1,0,0,1-.007-1.547l.007-.007,7.07-7.07a1.1,1.1,0,0,1,1.878.777Zm0,0"
+                                                transform="translate(989 -55.641)"
+                                            />
+                                        </g>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #5c5c5c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g id="Group_1424" data-name="Group 1424" transform="translate(-1037 -78.509)">
+                                            <path
+                                                id="Path_267"
+                                                data-name="Path 267"
+                                                class="cls-1"
+                                                d="M31.678,2H7.351a1.352,1.352,0,0,0-1.243.85,1.386,1.386,0,0,0,.284,1.495L18.555,16.685a1.338,1.338,0,0,0,1.919,0L32.638,4.345a1.386,1.386,0,0,0,.284-1.495A1.352,1.352,0,0,0,31.678,2Z"
+                                                transform="translate(1036.485 76.509)"
+                                            />
+                                            <path
+                                                id="Path_268"
+                                                data-name="Path 268"
+                                                class="cls-1"
+                                                d="M20.474,19.4a1.338,1.338,0,0,0-1.919,0L6.391,31.741a1.386,1.386,0,0,0-.284,1.495,1.352,1.352,0,0,0,1.243.85H31.678a1.352,1.352,0,0,0,1.243-.85,1.386,1.386,0,0,0-.284-1.495Z"
+                                                transform="translate(1036.485 82.424)"
+                                            />
+                                            <path id="Path_269" data-name="Path 269" class="cls-1" d="M30.114,15H27.371a1.371,1.371,0,1,0,0,2.742h2.742a1.371,1.371,0,1,0,0-2.742Z" transform="translate(1043.515 81.138)" />
+                                            <path id="Path_270" data-name="Path 270" class="cls-1" d="M24.114,17.742a1.371,1.371,0,1,0,0-2.742H21.371a1.371,1.371,0,1,0,0,2.742Z" transform="translate(1041.386 81.138)" />
+                                            <path id="Path_271" data-name="Path 271" class="cls-1" d="M18.114,17.742a1.371,1.371,0,1,0,0-2.742H15.371a1.371,1.371,0,1,0,0,2.742Z" transform="translate(1039.258 81.138)" />
+                                            <path id="Path_272" data-name="Path 272" class="cls-1" d="M12.114,17.742a1.371,1.371,0,1,0,0-2.742H9.371a1.371,1.371,0,1,0,0,2.742Z" transform="translate(1037.129 81.138)" />
+                                            <path id="Path_273" data-name="Path 273" class="cls-1" d="M6.114,15H3.371a1.371,1.371,0,1,0,0,2.742H6.114a1.371,1.371,0,1,0,0-2.742Z" transform="translate(1035 81.138)" />
+                                        </g>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #5c5c5c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g id="_33-Flip" data-name="33-Flip" transform="translate(38) rotate(90)">
+                                            <path
+                                                id="Path_274"
+                                                data-name="Path 274"
+                                                class="cls-1"
+                                                d="M31.447,2H7.339a1.341,1.341,0,0,0-1.232.869A1.45,1.45,0,0,0,6.388,4.4L18.442,17.011a1.3,1.3,0,0,0,1.9,0L32.4,4.4a1.45,1.45,0,0,0,.281-1.528A1.341,1.341,0,0,0,31.447,2Z"
+                                                transform="translate(-0.393 -2)"
+                                            />
+                                            <path
+                                                id="Path_275"
+                                                data-name="Path 275"
+                                                class="cls-1"
+                                                d="M20.344,19.409a1.3,1.3,0,0,0-1.9,0L6.388,32.023a1.45,1.45,0,0,0-.281,1.528,1.341,1.341,0,0,0,1.232.869H31.447a1.341,1.341,0,0,0,1.232-.869,1.45,1.45,0,0,0-.281-1.528Z"
+                                                transform="translate(-0.393 3.581)"
+                                            />
+                                            <path id="Path_276" data-name="Path 276" class="cls-1" d="M30.2,15H27.4a1.4,1.4,0,0,0,0,2.8h2.8a1.4,1.4,0,0,0,0-2.8Z" transform="translate(6.394 2.598)" />
+                                            <path id="Path_277" data-name="Path 277" class="cls-1" d="M24.2,17.8a1.4,1.4,0,0,0,0-2.8H21.4a1.4,1.4,0,0,0,0,2.8Z" transform="translate(4.295 2.598)" />
+                                            <path id="Path_278" data-name="Path 278" class="cls-1" d="M18.2,17.8a1.4,1.4,0,0,0,0-2.8H15.4a1.4,1.4,0,0,0,0,2.8Z" transform="translate(2.197 2.598)" />
+                                            <path id="Path_279" data-name="Path 279" class="cls-1" d="M12.2,17.8a1.4,1.4,0,0,0,0-2.8H9.4a1.4,1.4,0,0,0,0,2.8Z" transform="translate(0.098 2.598)" />
+                                            <path id="Path_280" data-name="Path 280" class="cls-1" d="M6.2,15H3.4a1.4,1.4,0,0,0,0,2.8H6.2a1.4,1.4,0,0,0,0-2.8Z" transform="translate(-2 2.598)" />
+                                        </g>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #5c5c5c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path
+                                            id="_026-rotate"
+                                            data-name="026-rotate"
+                                            class="cls-1"
+                                            d="M38,19.074H35.031a16.008,16.008,0,0,0-6.012-12.5V2.924a19.153,19.153,0,0,1,3.416,2.715A18.876,18.876,0,0,1,38,19.074ZM26.051,0h-14.1V38h14.1ZM2.969,5.715V8.868a19.012,19.012,0,0,1,5.186-5.4q.407-.283.826-.543v3.6A15.94,15.94,0,0,0,5.194,10.91h2.97v2.969H0V5.715Z"
+                                        />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #5c5c5c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path
+                                            id="_026-rotate"
+                                            data-name="026-rotate"
+                                            class="cls-1"
+                                            d="M0,19.074H2.969A16.008,16.008,0,0,1,8.98,6.57V2.924A19.153,19.153,0,0,0,5.565,5.639,18.876,18.876,0,0,0,0,19.074ZM11.949,0h14.1V38h-14.1ZM35.031,5.715V8.868a19.012,19.012,0,0,0-5.186-5.4q-.407-.283-.826-.543v3.6a15.94,15.94,0,0,1,3.786,4.379h-2.97v2.969H38V5.715Z"
+                                        />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" data-toggle="popover" data-placement="bottom" data-content="<img src='images/rotatearrow.jpg'>">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #5c5c5c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path
+                                            id="Path_302"
+                                            data-name="Path 302"
+                                            class="cls-1"
+                                            d="M3.861,20.559H0V17.59H3.861Zm3.066-5.938L10.79,3.948a1.484,1.484,0,0,1,1.9-.891l21.362,7.731a1.485,1.485,0,0,1,.891,1.9l-.7,1.932H37.4l.333-.921A4.458,4.458,0,0,0,35.064,8L13.7.266A4.458,4.458,0,0,0,8,2.938L3.77,14.621Zm24.094,8.906L27.212,34.052a1.486,1.486,0,0,1-1.9.891L3.95,27.211a1.486,1.486,0,0,1-.891-1.9L3.7,23.528H.547L.267,24.3A4.458,4.458,0,0,0,2.939,30L24.3,37.734A4.453,4.453,0,0,0,30,35.062l4.174-11.535ZM10.689,17.59H6.83v2.969h3.859Zm6.828,0H13.658v2.969h3.859Zm6.828,0H20.486v2.969h3.859Zm6.828,0H27.314v2.969h3.859Zm6.828,0H34.142v2.969H38Zm0,0"
+                                            transform="translate(-0.001 0)"
+                                        />
+                                    </svg>
+                                </li>
+                                <li>
+                                    <span>Mark & Measure</span>
+                                    <svg id="grid_wireframe_5" data-name="grid wireframe 5" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #5c5c5c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path
+                                            id="Path_295"
+                                            data-name="Path 295"
+                                            class="cls-1"
+                                            d="M38.833,4H7.167A3.167,3.167,0,0,0,4,7.167V38.833A3.167,3.167,0,0,0,7.167,42H38.833A3.167,3.167,0,0,0,42,38.833V7.167A3.167,3.167,0,0,0,38.833,4ZM18.25,27.75v-9.5h9.5v9.5Zm9.5,3.167v7.917h-9.5V30.917ZM7.167,18.25h7.917v9.5H7.167ZM18.25,15.083V7.167h9.5v7.917ZM30.917,18.25h7.917v9.5H30.917Zm7.917-3.167H30.917V7.167h7.917ZM15.083,7.167v7.917H7.167V7.167ZM7.167,30.917h7.917v7.917H7.167Zm23.75,7.917V30.917h7.917v7.917Z"
+                                            transform="translate(-4 -4)"
+                                        />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="38.663" height="38.663" viewBox="0 0 38.663 38.663">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #5c5c5c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g id="Group_1368" data-name="Group 1368" transform="translate(38.663) rotate(90)">
+                                            <path id="Path_298" data-name="Path 298" class="cls-1" d="M392.792,1.62A1.133,1.133,0,0,0,391.284.112l-8.111,3.839,5.78,5.78Z" transform="translate(-354.238 -0.003)" />
+                                            <rect id="Rectangle_1103" data-name="Rectangle 1103" class="cls-1" width="7.259" height="8.306" transform="translate(5.878 26.911) rotate(-45)" />
+                                            <path id="Path_299" data-name="Path 299" class="cls-1" d="M1.246,380.65a4.153,4.153,0,0,0,5.874,5.874l3.059-3.059-5.874-5.874Z" transform="translate(-0.03 -349.078)" />
+                                            <rect id="Rectangle_1104" data-name="Rectangle 1104" class="cls-1" width="7.789" height="8.306" transform="translate(21.778 11.011) rotate(-45)" />
+                                            <path
+                                                id="Path_300"
+                                                data-name="Path 300"
+                                                class="cls-1"
+                                                d="M38.331,30.767,7.9.332a1.133,1.133,0,0,0-1.6,0L.332,6.295a1.133,1.133,0,0,0,0,1.6l3.185,3.185L6.461,8.137a1.133,1.133,0,0,1,1.6,1.6L5.118,12.683,7.26,14.825l2.02-2.02a1.133,1.133,0,1,1,1.6,1.6l-2.02,2.02L11,18.569l2.944-2.944a1.133,1.133,0,1,1,1.6,1.6l-2.944,2.944,2.142,2.142,2.02-2.02a1.133,1.133,0,1,1,1.6,1.6l-2.02,2.02,2.142,2.142,2.944-2.944a1.133,1.133,0,1,1,1.6,1.6l-2.944,2.944L22.236,29.8l2.02-2.02a1.133,1.133,0,0,1,1.6,1.6l-2.02,2.02,2.142,2.142L28.924,30.6a1.133,1.133,0,0,1,1.6,1.6l-2.944,2.944,3.185,3.185a1.133,1.133,0,0,0,1.6,0l5.962-5.962A1.132,1.132,0,0,0,38.331,30.767Z"
+                                                transform="translate(0 -0.001)"
+                                            />
+                                        </g>
+                                    </svg>
+                                    <svg id="Group_8" data-name="Group 8" xmlns="http://www.w3.org/2000/svg" width="36.855" height="38" viewBox="0 0 36.855 38">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #5c5c5c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g id="Group_7" data-name="Group 7">
+                                            <path
+                                                id="Path_218"
+                                                data-name="Path 218"
+                                                class="cls-1"
+                                                d="M28.563,35.571a19.231,19.231,0,0,0-1.612-6.953l-2.22.985a16.835,16.835,0,0,1,1.4,5.968H10.809l4.479-14.932a17.118,17.118,0,0,1,5.53,3.452l1.665-1.77a19.534,19.534,0,0,0-6.5-4.008L21.271.7,18.944,0,7.544,38H44.4V35.571Z"
+                                                transform="translate(-7.544)"
+                                            />
+                                            <path
+                                                id="Path_219"
+                                                data-name="Path 219"
+                                                class="cls-1"
+                                                d="M305.679,269.855a4.632,4.632,0,1,0-4.631-4.632A4.632,4.632,0,0,0,305.679,269.855Zm0-6.616a1.985,1.985,0,1,1-1.985,1.985A1.985,1.985,0,0,1,305.679,263.239Z"
+                                                transform="translate(-279.366 -241.321)"
+                                            />
+                                            <path
+                                                id="Path_220"
+                                                data-name="Path 220"
+                                                class="cls-1"
+                                                d="M204.205,322.677l2.256-1.385a21.576,21.576,0,0,0-1.633-2.3l-2.052,1.67A18.783,18.783,0,0,1,204.205,322.677Z"
+                                                transform="translate(-188.09 -294.989)"
+                                            />
+                                        </g>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="43.905" height="38" viewBox="0 0 43.905 38">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #5c5c5c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path
+                                            id="_013-ellipse"
+                                            data-name="013-ellipse"
+                                            class="cls-1"
+                                            d="M43.9,49.19H40.288A15.611,15.611,0,0,0,35.3,42a20.091,20.091,0,0,0-9.11-4.223V34.429H17.714V37.78A20.09,20.09,0,0,0,8.6,42,15.611,15.611,0,0,0,3.617,49.19H0v8.477H3.617A15.611,15.611,0,0,0,8.6,64.855a20.09,20.09,0,0,0,9.11,4.223v3.351h8.477V69.078a20.091,20.091,0,0,0,9.11-4.223,15.611,15.611,0,0,0,4.986-7.188H43.9ZM26.191,66.449v-2.5H17.714v2.5c-5.344-1.172-9.623-4.5-11.356-8.781H8.477V49.19H6.358c1.732-4.277,6.011-7.609,11.356-8.781v2.5h8.477v-2.5c5.344,1.172,9.623,4.5,11.356,8.781H35.428v8.477h2.119C35.814,61.945,31.535,65.277,26.191,66.449Z"
+                                            transform="translate(0 -34.429)"
+                                        />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #5c5c5c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path
+                                            id="Path_301"
+                                            data-name="Path 301"
+                                            class="cls-1"
+                                            d="M35.579.282a3.916,3.916,0,0,0-4.314.95L23.54,9.41a1.5,1.5,0,0,1-1.652.347L5.138,2.89A3.668,3.668,0,0,0,.709,8.357l.005.008L11.3,23.54a4.447,4.447,0,0,0,1.573,6.435,1.489,1.489,0,0,1,.268.268,3.332,3.332,0,0,1,.573,2.116c0,1.855-2.542,2.7-2.648,2.733a1.484,1.484,0,1,0,.848,2.844h0A8.553,8.553,0,0,0,14.2,36.789a5.348,5.348,0,0,0,2.481-4.429,7.458,7.458,0,0,0-.281-2.091,4.477,4.477,0,0,0,2.486-2.092l8.849-2.265A1.484,1.484,0,1,0,27,23.036l-7.7,1.97A4.452,4.452,0,0,0,13.7,21.787L3.154,6.672a.657.657,0,0,1,.035-.834.66.66,0,0,1,.818-.2L20.755,12.5a4.481,4.481,0,0,0,4.941-1.05l7.726-8.178a.965.965,0,0,1,1.666.664V19.814a1.484,1.484,0,0,1-1.116,1.438,1.484,1.484,0,1,0,.736,2.876,4.451,4.451,0,0,0,3.349-4.314V3.936A3.914,3.914,0,0,0,35.579.282ZM16.459,26.052a1.484,1.484,0,0,1-2.069,1.364,2.984,2.984,0,0,0-.261-.145,1.484,1.484,0,1,1,2.329-1.219Z"
+                                            transform="translate(-0.057 0)"
+                                        />
+                                    </svg>
+                               
+                                </li>
+								
+								
+								
+								
+								
+								
+								   <li>
+                                    <span>Reset</span>
+                             
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                        width="1em"
+                                        height="1em"
+                                        style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+                                        preserveAspectRatio="xMidYMid meet"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path fill="none" stroke="#5c5c5c" stroke-width="2" d="M20 8c-1.403-2.96-4.463-5-8-5a9 9 0 1 0 0 18h0a9 9 0 0 0 9-9m0-9v6h-6" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="imageArea d-flex align-items-center">
+                            <img src="images/x-ray.jpg" class="img-fluid" />
+                            <div class="thumbnailImg">
+                                <img src="images/thumbnail.jpg" class="img-fluid" />
+                            </div>
+                        </div>
+                        <div class="infoBox">
+                            <h4>** To get the best result, please arrange the image so that the knee joint is aligned with the dotted line above</h4>
+                            <h5>Reserved status bar - To be used to display any system messages / error messages that will not be otherwise displayed as a popup dialog.</h5>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="Trauma" role="tabpanel" aria-labelledby="trauma-tab">Trauma</div>
+                    <div class="tab-pane fade" id="Cancer" role="tabpanel" aria-labelledby="cancer-tab">Cancer</div>
+                </div>
+            </div>
+            <!--Middle Section of Page End-->
+            <!--Right Sidebar Start-->
+            <sidebar id="sidebar" class="rightSidebar">
+                <h3 class="m-0">Observations <i id="sidebarCollapse2" class="fas fa-bars float-right"></i></h3>
+                <div class="mainWrapper">
+                    <table class="table mb-2" border="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Osteophytes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td width="70%">Medial Femoral Margin</td>
+                                <td width="30%">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="70%">Medial Tibial Plateau</td>
+                                <td width="30%">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="70%">Lateral Femoral Margin</td>
+                                <td width="30%">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="70%">Lateral Tibial Plateau</td>
+                                <td width="30%">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table mb-2" border="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Joint Space Narrowing</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td width="70%">Medial tibio femoral compartment</td>
+                                <td width="30%">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="70%">Lateral tibio femoral compartment</td>
+                                <td width="30%">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table mb-3" border="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Sclerosis</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td width="70%">Medial Femoral</td>
+                                <td width="30%">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="70%">Medial Tibial</td>
+                                <td width="30%">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="70%">Lateral Femoral</td>
+                                <td width="30%">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="70%">Lateral Tibial</td>
+                                <td width="30%">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="btn btn-block btn-primary myNotes">
+                        Notes
+                        <svg id="Group_1353" data-name="Group 1353" xmlns="http://www.w3.org/2000/svg" width="19.996" height="19.996" viewBox="0 0 19.996 19.996">
+                            <defs>
+                                <style>
+                                    .cls-f {
+                                        fill: #fff;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="Group_1352" data-name="Group 1352">
+                                <path
+                                    id="Path_282"
+                                    data-name="Path 282"
+                                    class="cls-f"
+                                    d="M17.5,8.748v7.5a1.25,1.25,0,0,1-1.25,1.25H3.749a1.252,1.252,0,0,1-1.25-1.25V2.5h8.748l2.5-2.5H2.5A2.5,2.5,0,0,0,0,2.5V16.247A3.75,3.75,0,0,0,3.749,20h12.5A3.748,3.748,0,0,0,20,16.247v-10Z"
+                                />
+                                <path id="Path_283" data-name="Path 283" class="cls-1" d="M134.881,253.416l5-1.25-1.875-1.875-1.875-1.875Z" transform="translate(-129.613 -238.715)" />
+                                <path
+                                    id="Path_284"
+                                    data-name="Path 284"
+                                    class="cls-f"
+                                    d="M192.256,8.926l3.534,3.536,8.692-8.692a.776.776,0,0,0,.233-.492.575.575,0,0,0-.161-.461L202,.262l-.1-.1A.579.579,0,0,0,201.488,0a.766.766,0,0,0-.54.235l-.028.028-2.5,2.5Z"
+                                    transform="translate(-184.747 0)"
+                                />
+                            </g>
+                        </svg>
+                    </button>
+                    <table class="chartTable table" border="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Reference Charts</th>
+                                <th class="text-right"><i class="fas fa-info-circle"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td width="33%">Kellgren Lawrence <i class="fas fa-ellipsis-v float-right"></i></td>
+                                <td width="33%" class="text-center">OARSI <i class="fas fa-ellipsis-v float-right"></i></td>
+                                <td width="33%" class="text-center">Ahlbäck <i class="fas fa-ellipsis-v float-right"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Disclaimer: Please complete and review all fundings clinically before any treatment is offered.</p>
+                    <hr />
+                    <ul class="d-flex m-0 p-0">
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                                    <defs>
+                                        <style>
+                                            .cls-1 {
+                                                fill: #fff;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <path
+                                        id="_025-print"
+                                        data-name="025-print"
+                                        class="cls-1"
+                                        d="M48.047,30.469A1.953,1.953,0,0,0,50,28.516v-4.2A7.817,7.817,0,0,0,46,17.5V10.645a1.953,1.953,0,0,0-1.953-1.953H38.184V1.953A1.953,1.953,0,0,0,36.23,0H13.77a1.953,1.953,0,0,0-1.953,1.953V8.691H5.957A1.953,1.953,0,0,0,4,10.645V17.5a7.817,7.817,0,0,0-4,6.818V38.281a7.821,7.821,0,0,0,7.813,7.813h4v1.953A1.953,1.953,0,0,0,13.77,50H36.23a1.953,1.953,0,0,0,1.953-1.953V46.094h4A7.821,7.821,0,0,0,50,38.281a1.953,1.953,0,0,0-3.906,0,3.911,3.911,0,0,1-3.906,3.906h-4V34.082h2.051a1.953,1.953,0,0,0,0-3.906H9.766a1.953,1.953,0,0,0,0,3.906h2.051v8.105h-4a3.911,3.911,0,0,1-3.906-3.906V24.316A3.911,3.911,0,0,1,7.813,20.41H42.188a3.911,3.911,0,0,1,3.906,3.906v4.2A1.953,1.953,0,0,0,48.047,30.469Zm-13.77,3.613V46.094H15.723V34.082ZM42.09,12.6V16.5H38.184V12.6ZM34.277,3.906V16.5H15.723V3.906ZM11.816,12.6V16.5H7.91V12.6Zm6.836-1.953a1.953,1.953,0,0,1,1.953-1.953h8.789a1.953,1.953,0,0,1,0,3.906H20.605A1.953,1.953,0,0,1,18.652,10.645Zm0,0"
+                                    />
+                                </svg>
+                                <span>Print</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="61.538" height="50" viewBox="0 0 61.538 50">
+                                    <defs>
+                                        <style>
+                                            .cls-1 {
+                                                fill: #5c5c5c;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <path
+                                        id="_001-mail_inbox_app"
+                                        data-name="001-mail inbox app"
+                                        class="cls-1"
+                                        d="M54.327,48H7.212A7.22,7.22,0,0,0,0,55.212V61.16L26.465,80.846a7.168,7.168,0,0,0,8.608,0L61.538,61.16V55.212A7.22,7.22,0,0,0,54.327,48Zm2.4,10.745L32.2,76.988a2.389,2.389,0,0,1-2.869,0L4.808,58.745V55.212a2.407,2.407,0,0,1,2.4-2.4H54.327a2.407,2.407,0,0,1,2.4,2.4Zm0,11.984,4.808-3.576V90.788A7.22,7.22,0,0,1,54.327,98H7.212A7.22,7.22,0,0,1,0,90.788V67.152l4.808,3.576v20.06a2.407,2.407,0,0,0,2.4,2.4H54.327a2.407,2.407,0,0,0,2.4-2.4Z"
+                                        transform="translate(0 -48)"
+                                    />
+                                </svg>
+                                <span>Email</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="57.994" height="50" viewBox="0 0 57.994 50">
+                                    <defs>
+                                        <style>
+                                            .cls-1 {
+                                                fill: #5c5c5c;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <g id="Group_1418" data-name="Group 1418" transform="translate(-1835 -1000.635)">
+                                        <g id="Group_28" data-name="Group 28" transform="translate(1835 1000.635)">
+                                            <path
+                                                id="Path_242"
+                                                data-name="Path 242"
+                                                class="cls-1"
+                                                d="M47.135,52.416c-.267-9.488-8.377-17.127-18.307-17.127A18.688,18.688,0,0,0,16.52,39.858a17.427,17.427,0,0,0-5.642,9.534,13.9,13.9,0,0,0-7.2,3.948,12.928,12.928,0,0,0-.125,17.933,13.908,13.908,0,0,0,8.755,4.333l.12.012h.347v-4.2l.015-.134-.015,0V71.27h-.1a8.92,8.92,0,0,1,.364-17.8l1.877-.144.192-1.8a13.557,13.557,0,0,1,13.719-11.89A13.55,13.55,0,0,1,42.62,52.9v3.8H45.9a7.289,7.289,0,1,1,0,14.566h-.565v4.348H45.9a11.619,11.619,0,0,0,1.237-23.2Z"
+                                                transform="translate(0 -35.289)"
+                                            />
+                                        </g>
+                                        <g id="Group_30" data-name="Group 30" transform="translate(1849.259 1013.29)">
+                                            <path
+                                                id="Path_243"
+                                                data-name="Path 243"
+                                                class="cls-1"
+                                                d="M172.97,220.781l-8.14,8.14V201.963H159.4v26.958l-8.14-8.14-3.837,3.837,14.69,14.69,14.69-14.69Z"
+                                                transform="translate(-147.428 -201.963)"
+                                            />
+                                        </g>
+                                    </g>
+                                </svg>
+                                <span>Download</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rightSidebarToggleStrip"><span></span></div>
+            </sidebar>
+            <!--Right Sidebar End-->
+        </div>
+
+        <!------- Notes Sliding Window ------>
+        <div class="notesWindow">
+            <div class="notesHead">
+                Notes <span class="closeBtn float-right"><i class="fas fa-times"></i></span>
+            </div>
+            <div class="notesBody">Lorem Ipsum...</div>
+        </div>
+
+        <!------- Reference Chart Window ------>
+        <div class="refChartWindow">
+            <div class="refChartHead">
+                Grading Reference Chart <span class="closeBtn float-right"><i class="fas fa-times"></i></span>
+            </div>
+            <div class="refChartBody">
+                <table class="table" border="1">
+                    <tbody>
+                        <tr>
+                            <th>Grade 0 (none)</th>
+                            <td>Definite absence of x-ray changes of osteoarthritis</td>
+                        </tr>
+                        <tr>
+                            <th>Grade 1 (Doubtful)</th>
+                            <td>Doubtful joint space narrowing and possible osteophytic lipping</td>
+                        </tr>
+                        <tr>
+                            <th>Grade 2 (Minimal)</th>
+                            <td>Definite Osteophytes and possible joint space narrowing</td>
+                        </tr>
+                        <tr>
+                            <th>Grade 3 (Moderate)</th>
+                            <td>Moderate multiple osteophytes definite narrowing of joint space and some sclerosis and possible deformity of bone ends</td>
+                        </tr>
+                        <tr>
+                            <th>Grade 4 (Severe)</th>
+                            <td>Large osteophytes marked narrowing of joint space, severe sclerosis and definite deformity of bone ends</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- jQuery, Popper.js, and Bootstrap JS -->
+        <script src="js/jquery-3.5.1.slim.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/bootstrap-datetimepicker.js"></script>
+
+        <!-- Fontawesome -->
+        <script src="js/all.min.js"></script>
+        <script>
+            document.getElementById("uploadBtn").onchange = function () {
+                document.getElementById("uploadFile").value = this.value;
+            };
+        </script>
+        <script>
+            $(".form_date").datetimepicker({
+                weekStart: 1,
+                todayBtn: 1,
+                autoclose: 1,
+                todayHighlight: 1,
+                startView: 2,
+                minView: 2,
+                forceParse: 0,
+                pickerPosition: "bottom-left",
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $(".myNotes").on("click", function () {
+                    $(".notesWindow").addClass("notesWindowSlide");
+                });
+                $(".notesWindow .notesHead .closeBtn").on("click", function () {
+                    $(".notesWindow").removeClass("notesWindowSlide");
+                });
+
+                $(".chartTable tbody").on("click", function () {
+                    $(".refChartWindow").addClass("refChartWindowShow");
+                });
+                $(".refChartWindow .closeBtn").on("click", function () {
+                    $(".refChartWindow").removeClass("refChartWindowShow");
+                });
+            });
+        </script>
+
+        <script>
+            $(function () {
+                $('[data-toggle="popover"]').popover({
+                    html: true,
+                });
+            });
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                $(".collapseMenu").on("click", function () {
+                    $("#sidebar").addClass("active1");
+                    $(".leftSidebarToggleStrip").addClass("showleftSidebarToggleStrip");
+                });
+                $(".leftSidebarToggleStrip span").on("click", function () {
+                    $("#sidebar").removeClass("active1");
+                    $(".leftSidebarToggleStrip").removeClass("showleftSidebarToggleStrip");
+                });
+
+                $("#sidebarCollapse2").on("click", function () {
+                    $("#sidebar.rightSidebar").addClass("active2");
+                    $(".rightSidebarToggleStrip").addClass("showrightSidebarToggleStrip");
+                });
+                $(".rightSidebarToggleStrip span").on("click", function () {
+                    $("#sidebar.rightSidebar").removeClass("active2");
+                    $(".rightSidebarToggleStrip").removeClass("showrightSidebarToggleStrip");
+                });
+            });
+        </script>
+    </body>
+</html>
